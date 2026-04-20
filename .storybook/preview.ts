@@ -18,12 +18,12 @@ const preview: Preview = {
     options: {
       storySort: {
         order: [
+          'Brand',
+          ['Logo', 'Blueprint', 'Typography', 'Iconography', 'Voice'],
+          'Components',
+          [],
           'Tokens',
           ['Colors', 'Typography', 'Spacing', 'Radius', 'Shadows', 'Motion'],
-          'Components',
-          ['Badge', 'Button', 'Card', 'DataTable', 'Divider', 'Input'],
-          'Brand',
-          ['Logo', 'Typography', 'Iconography', 'Voice'],
         ],
       },
     },

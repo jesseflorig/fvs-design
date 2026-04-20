@@ -52,14 +52,3 @@ export const Favicon: StoryObj = {
     </div>
   ),
 };
-
-export const VanBlueprint: StoryObj = {
-  render: () => (
-    <div style={{ background: 'var(--bg)', padding: 24 }}>
-      <div style={{ fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--fg-muted)', marginBottom: 16 }}>
-        Blueprint — placeholder for editorial / instruction imagery
-      </div>
-      <img src="/src/assets/svg/van-blueprint.svg" alt="FVS van blueprint" style={{ width: '100%', maxWidth: 800 }} />
-    </div>
-  ),
-};

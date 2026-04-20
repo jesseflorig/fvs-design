@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Passenger" xmlns="http://www.w3.org/2000/svg" viewBox="57 68 711 390">
+  <g id="Wheel">
+    <path fill="currentColor" d="M233.3376,370.4663c-21.8929,0-39.6406,17.7477-39.6406,39.6406s17.7477,39.6407,39.6406,39.6407,39.6406-17.7477,39.6406-39.6407-17.7478-39.6406-39.6406-39.6406ZM233.3376,436.8773c-14.7849,0-26.7703-11.9855-26.7703-26.7703s11.9854-26.7703,26.7703-26.7703,26.7703,11.9855,26.7703,26.7703-11.9855,26.7703-26.7703,26.7703Z"/>
+    <circle cx="233.3376" cy="410.107" r="23.6814" style="fill: none; stroke: currentColor; stroke-miterlimit: 10; stroke-width: 2px;"/>
+    <circle cx="233.3376" cy="410.107" r="11.3259" style="fill: none; stroke: currentColor; stroke-miterlimit: 10; stroke-width: 2px;"/>
+    <circle fill="currentColor" cx="233.3376" cy="410.107" r="5.1481"/>
+  </g>
+  <g id="Wheel-2" data-name="Wheel">
+    <path fill="currentColor" d="M650.3367,370.4663c-21.8929,0-39.6406,17.7477-39.6406,39.6406s17.7477,39.6407,39.6406,39.6407,39.6406-17.7477,39.6406-39.6407-17.7478-39.6406-39.6406-39.6406ZM650.3367,436.8773c-14.7849,0-26.7703-11.9855-26.7703-26.7703s11.9854-26.7703,26.7703-26.7703,26.7703,11.9855,26.7703,26.7703-11.9855,26.7703-26.7703,26.7703Z"/>
+    <circle cx="650.3367" cy="410.107" r="23.6814" style="fill: none; stroke: currentColor; stroke-miterlimit: 10; stroke-width: 2px;"/>
+    <circle cx="650.3367" cy="410.107" r="11.3259" style="fill: none; stroke: currentColor; stroke-miterlimit: 10; stroke-width: 2px;"/>
+    <circle fill="currentColor" cx="650.3367" cy="410.107" r="5.1481"/>
+  </g>
+  <g>
+    <path d="M341.4485,416.2847v-249.6846h111.7146s15.4444,1.0296,29.3444,4.6333,25.2259,8.237,25.2259,8.237v236.8143" style="fill: none; stroke: currentColor; stroke-miterlimit: 10; stroke-width: 2px;"/>
+    <path d="M507.7333,218.5963s45.2829,2.6158,50.4517,5.1481c2.2827,1.1183,17.5037,8.237,17.5037,8.237l63.3221,56.1147v31.4036s-3.0889,25.2259-4.1185,28.3147-3.0176,15.638-3.0176,15.638" style="fill: none; stroke: currentColor; stroke-miterlimit: 10; stroke-width: 2px;"/>
+    <polyline points="118.5325 294.5901 131.4045 294.7887 135.523 299.422 135.523 363.4525 130.3749 367.8922 117.5046 367.8922 117.5046 361.1997" style="fill: none; stroke: currentColor; stroke-miterlimit: 10; stroke-width: 2px;"/>
+    <rect x="469.6371" y="312.7776" width="29.8592" height="6.1778" style="fill: none; stroke: currentColor; stroke-miterlimit: 10; stroke-width: 2px;"/>
+    <rect x="515.4555" y="315.8664" width="29.8592" height="6.1778" style="fill: none; stroke: currentColor; stroke-miterlimit: 10; stroke-width: 2px;"/>
+    <path d="M681.7403,308.6887l49.9369,13.3555s3.6037,1.0593,5.6629,5.1778,2.5741,16.474,2.5741,16.474l-36.037-3.0889-7.7222-14.4148-14.4148-17.5037Z" style="fill: none; stroke: currentColor; stroke-miterlimit: 10; stroke-width: 2px;"/>
+    <path d="M135.523,363.4525h63.8369s12.8703-11.0047,35.1258-11.0343c25.6267-.0341,38.4925,15.474,38.4925,15.474l335.6585,2.5741s11.3259-20.6222,39.6999-20.6222c25.6814,0,37.5221,13.6084,37.5221,13.6084l68.4702,4.9545" style="fill: none; stroke: currentColor; stroke-miterlimit: 10; stroke-width: 2px;"/>
+    <polyline points="491.2592 253.0888 493.3185 291.0244 487.6556 298.3924 193.697 294.5901 158.1748 275.7406 158.1748 253.0888" style="fill: none; stroke: currentColor; stroke-miterlimit: 10; stroke-width: 2px;"/>
+    <line x1="341.4485" y1="166.6001" x2="149.9378" y2="166.6001" style="fill: none; stroke: currentColor; stroke-miterlimit: 10; stroke-width: 2px;"/>
+    <path d="M591.6479,222.7148l-8.7518,4.6333,72.5887,60.748s7.7222,5.2657,10.8111,6.4939,8.7518,2.2579,8.7518,2.2579" style="fill: none; stroke: currentColor; stroke-miterlimit: 10; stroke-width: 2px;"/>
+    <path d="M618.4182,336.4886s-37.0666-2.7727-128.7034-5.2475-348.5288-9.197-348.5288-9.197" style="fill: none; stroke: currentColor; stroke-miterlimit: 10; stroke-width: 2px;"/>
+    <path d="M639.0108,288.0961l28.8296,29.9184-6.1778,2.0296-22.6518-.5444-21.1074.5148s-24.1962-4.1185-52.511-10.8111-38.0962-14.6134-38.0962-14.6134l-7.2074-67.2419,30.374,2.5741s5.658-.8917,20.5925,5.1481,28.375,17.9505,28.375,17.9505" style="fill: none; stroke: currentColor; stroke-miterlimit: 10; stroke-width: 2px;"/>
+    <path d="M142.7304,199.4338s0-9.6671,1.5444-10.1819,7.7222,0,7.7222,0l317.64,1s29.8592.8078,58.1739,5.6926c15.4045,2.6575,23.1666,13.9,23.1666,13.9,0,0-14.3878-5.9825-24.7111-6.6926-54.0554-3.7181-91.122-3.7181-91.122-3.7181H151.9971" style="fill: none; stroke: currentColor; stroke-miterlimit: 10; stroke-width: 2px;"/>
+    <rect x="280.7005" y="421.4329" width="322.7881" height="9.2666" style="fill: none; stroke: currentColor; stroke-miterlimit: 10; stroke-width: 2px;"/>
+    <rect x="69.8843" y="414.4329" width="47.6203" height="9.2666" style="fill: none; stroke: currentColor; stroke-miterlimit: 10; stroke-width: 2px;"/>
+    <rect x="117.5046" y="129.2761" width="433.4731" height="18.5333" style="fill: none; stroke: currentColor; stroke-miterlimit: 10; stroke-width: 2px;"/>
+    <rect x="176.1933" y="303.0257" width="165.2552" height="5.6629" style="fill: none; stroke: currentColor; stroke-miterlimit: 10; stroke-width: 2px;"/>
+    <path d="M453.6779,153.215H142.7304s-24.1962-4.6333-22.6518,41.1851l-2.5741,166.7996h-11.3259v5.6629h-5.1481v9.7815h6.6926l-.5148,23.1666h-6.1778v9.7815l81.8554,3.0889s-1.9549-51.407,51.4814-50.4517c53.542.9572,46.848,54.0554,46.848,54.0554h322.2733s-2.0593-55.5999,44.7888-55.5999,48.9073,55.5999,48.9073,55.5999h44.274s9.2666-3.0889,14.4148-6.1778,6.1778-5.6629,6.1778-5.6629l-2.5741-12.3555,5.1481-2.5741v-13.3852l-10.2963-7.7222-4.6333-39.6406s-1.0296-10.2963-15.9592-15.4444-43.2443-14.9296-43.2443-14.9296l-15.4444-1.5444-83.3998-74.1332s-54.5778-47.3832-71.5591-54.0554c-39.6406-15.5755-66.411-15.4444-66.411-15.4444Z" style="fill: none; stroke: currentColor; stroke-miterlimit: 10; stroke-width: 2px;"/>
+  </g>
+</svg>

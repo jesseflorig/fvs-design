@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Front" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="605 98 711 390">
+  <defs>
+    <clipPath id="front-clippath">
+      <rect x="831.1663" y="152.084" width="128.5064" height="265.2005" style="fill: none;"/>
+    </clipPath>
+    <clipPath id="front-clippath-1">
+      <rect x="959.673" y="152.084" width="128.5064" height="265.2005" style="fill: none;"/>
+    </clipPath>
+    <clipPath id="front-clippath-2">
+      <polygon points="849.194 379.241 849.194 379.241 880.855 379.241 880.855 457.9846 849.194 457.9846 849.194 379.241" style="fill: none;"/>
+    </clipPath>
+    <clipPath id="front-clippath-3">
+      <polygon points="1070.1517 379.241 1070.1517 379.241 1038.4907 379.241 1038.4907 457.9846 1070.1517 457.9846 1070.1517 379.241" style="fill: none;"/>
+    </clipPath>
+  </defs>
+  <rect x="856.7126" y="129.2761" width="205.9203" height="18.5333" style="fill: none; stroke: currentColor; stroke-miterlimit: 10; stroke-width: 2px;"/>
+  <ellipse cx="959.6727" cy="341.1219" rx="16.474" ry="6.6926" style="fill: none; stroke: currentColor; stroke-miterlimit: 10; stroke-width: 2px;"/>
+  <g>
+    <g id="_Mirror_Repeat_" data-name="&amp;lt;Mirror Repeat&amp;gt;">
+      <g style="clip-path: url(#front-clippath);">
+        <g>
+          <path d="M959.7732,153.0837s-24.1293.6459-46.2663,2.1904-37.5814,3.6037-37.5814,3.6037l-11.8407,2.5741-4.1185,5.1481-7.7222,124.4243h-5.1481s.5148-6.532,0-12.1949c-.5148-5.6629-3.0889-4.6037-6.6926-5.1333s-8.237,2.0444-8.237,2.0444v24.7111s0,4.1185,3.0889,5.1481,7.7222,3.0889,7.7222,3.0889l6.6926-3.0889,2.5741,7.1778-4.1185,26.2851,2.0593,21.0925,11.3259,6.1926,38.611,4.1185,9.2666,4.6333h50.3848" style="fill: none; stroke: currentColor; stroke-miterlimit: 10; stroke-width: 2px;"/>
+          <path d="M959.7732,322.044h-34.4256s-5.1481-1.0593-8.237,0-6.6926,7.2222-6.6926,7.2222l-7.7222,14.4296s-1.5444,2.5148,0,6.1481,8.7518,10.3111,8.7518,10.3111h48.3256" style="fill: none; stroke: currentColor; stroke-miterlimit: 10; stroke-width: 2px;"/>
+          <path d="M860.481,304.57l-3.668,29.8592,31.468,9.2666,11.3259-14.4296s1.0296-2.5593,0-5.1333-3.6371-4.0889-3.6371-4.0889l-27.7665-7.2666c-4.1185-4.6037-7.7222-8.2074-7.7222-8.2074Z" style="fill: none; stroke: currentColor; stroke-miterlimit: 10; stroke-width: 2px;"/>
+          <polygon points="945.1679 297.1052 945.1679 300.9663 900.0645 300.9663 897.805 297.1052 945.1679 297.1052" style="fill: none; stroke: currentColor; stroke-miterlimit: 10; stroke-width: 2px;"/>
+          <path d="M959.7732,219.3683l-85.3922,2.8315s-1.287.2574-2.8315,2.3167-2.0593,3.8611-2.0593,3.8611v55.0851s.5148,4.6333,2.5741,5.9204,10.2963,3.3463,10.2963,3.3463h77.4125" style="fill: none; stroke: currentColor; stroke-miterlimit: 10; stroke-width: 2px;"/>
+          <path d="M864.0847,161.4518l-3.8611,123.2323,1.9306,12.4211s-1.4157,5.9204,5.2768,9.2666c6.6926,3.3463,26.7703,7.7222,26.7703,7.7222h65.5718" style="fill: none; stroke: currentColor; stroke-miterlimit: 10; stroke-width: 2px;"/>
+          <line x1="888.5384" y1="292.7293" x2="900.0645" y2="309.7181" style="fill: none; stroke: currentColor; stroke-miterlimit: 10; stroke-width: 2px;"/>
+          <line x1="948.5142" y1="153.0837" x2="948.5142" y2="199.548" style="fill: none; stroke: currentColor; stroke-miterlimit: 10; stroke-width: 2px;"/>
+          <line x1="938.9956" y1="153.8521" x2="938.9956" y2="199.548" style="fill: none; stroke: currentColor; stroke-miterlimit: 10; stroke-width: 2px;"/>
+          <line x1="913.5068" y1="155.274" x2="913.5068" y2="201.8647" style="fill: none; stroke: currentColor; stroke-miterlimit: 10; stroke-width: 2px;"/>
+          <line x1="905.2575" y1="155.8949" x2="905.2575" y2="201.8647" style="fill: none; stroke: currentColor; stroke-miterlimit: 10; stroke-width: 2px;"/>
+          <polyline points="873.1149 159.4887 871.8069 204.1813 871.8069 222.1998" style="fill: none; stroke: currentColor; stroke-miterlimit: 10; stroke-width: 2px;"/>
+          <polyline points="848.1255 339.0625 895.9697 349.844 907.5022 325.1625" style="fill: none; stroke: currentColor; stroke-miterlimit: 10; stroke-width: 2px;"/>
+          <line x1="899.6069" y1="324.1329" x2="912.5002" y2="326.1922" style="fill: none; stroke: currentColor; stroke-miterlimit: 10; stroke-width: 2px;"/>
+          <polyline points="895.9697 349.844 909.9984 365.0606 959.7732 365.0606" style="fill: none; stroke: currentColor; stroke-miterlimit: 10; stroke-width: 2px;"/>
+          <path d="M850.1848,360.155l1.287,25.7555s.5148,7.4648,6.95,18.0185,7.4648,12.3555,7.4648,12.3555h49.9369l7.4648-3.3463,36.4849-.0296" style="fill: none; stroke: currentColor; stroke-miterlimit: 10; stroke-width: 2px;"/>
+          <path d="M959.7732,394.9198h-47.273s2.0363,6.4352,5.1252,9.0092,5.6629,4.1185,5.6629,4.1185h36.4849" style="fill: none; stroke: currentColor; stroke-miterlimit: 10; stroke-width: 2px;"/>
+          <path d="M959.7732,242.0201s-2.2498-4.6333-11.259-9.7815c-9.0092-5.1481-12.3775-6.95-12.3775-6.95,0,0-15.9373-.7722-36.5298,0s-30.1166,3.0889-30.1166,3.0889" style="fill: none; stroke: currentColor; stroke-miterlimit: 10; stroke-width: 2px;"/>
+        </g>
+      </g>
+    </g>
+    <g id="_Mirror_Repeat_-2" data-name="&amp;lt;Mirror Repeat&amp;gt;">
+      <g style="clip-path: url(#front-clippath-1);">
+        <g>
+          <path d="M959.5725,153.0837s24.1293.6459,46.2663,2.1904,37.5814,3.6037,37.5814,3.6037l11.8407,2.5741,4.1185,5.1481,7.7222,124.4243h5.1481s-.5148-6.532,0-12.1949c.5148-5.6629,3.0889-4.6037,6.6926-5.1333s8.237,2.0444,8.237,2.0444v24.7111s0,4.1185-3.0889,5.1481-7.7222,3.0889-7.7222,3.0889l-6.6926-3.0889-2.5741,7.1778,4.1185,26.2851-2.0593,21.0925-11.3259,6.1926-38.611,4.1185-9.2666,4.6333h-50.3848" style="fill: none; stroke: currentColor; stroke-miterlimit: 10; stroke-width: 2px;"/>
+          <path d="M959.5725,322.044h34.4256s5.1481-1.0593,8.237,0,6.6926,7.2222,6.6926,7.2222l7.7222,14.4296s1.5444,2.5148,0,6.1481-8.7518,10.3111-8.7518,10.3111h-48.3256" style="fill: none; stroke: currentColor; stroke-miterlimit: 10; stroke-width: 2px;"/>
+          <path d="M1058.8647,304.57l3.668,29.8592-31.468,9.2666-11.3259-14.4296s-1.0296-2.5593,0-5.1333,3.6371-4.0889,3.6371-4.0889l27.7665-7.2666c4.1185-4.6037,7.7222-8.2074,7.7222-8.2074Z" style="fill: none; stroke: currentColor; stroke-miterlimit: 10; stroke-width: 2px;"/>
+          <polygon points="974.1778 297.1052 974.1778 300.9663 1019.2812 300.9663 1021.5407 297.1052 974.1778 297.1052" style="fill: none; stroke: currentColor; stroke-miterlimit: 10; stroke-width: 2px;"/>
+          <path d="M959.5725,219.3683l85.3922,2.8315s1.287.2574,2.8315,2.3167,2.0593,3.8611,2.0593,3.8611v55.0851s-.5148,4.6333-2.5741,5.9204-10.2963,3.3463-10.2963,3.3463h-77.4125" style="fill: none; stroke: currentColor; stroke-miterlimit: 10; stroke-width: 2px;"/>
+          <path d="M1055.261,161.4518l3.8611,123.2323-1.9306,12.4211s1.4157,5.9204-5.2768,9.2666c-6.6926,3.3463-26.7703,7.7222-26.7703,7.7222h-65.5718" style="fill: none; stroke: currentColor; stroke-miterlimit: 10; stroke-width: 2px;"/>
+          <line x1="1030.8073" y1="292.7293" x2="1019.2812" y2="309.7181" style="fill: none; stroke: currentColor; stroke-miterlimit: 10; stroke-width: 2px;"/>
+          <line x1="970.8315" y1="153.0837" x2="970.8315" y2="199.548" style="fill: none; stroke: currentColor; stroke-miterlimit: 10; stroke-width: 2px;"/>
+          <line x1="980.3501" y1="153.8521" x2="980.3501" y2="199.548" style="fill: none; stroke: currentColor; stroke-miterlimit: 10; stroke-width: 2px;"/>
+          <line x1="1005.8389" y1="155.274" x2="1005.8389" y2="201.8647" style="fill: none; stroke: currentColor; stroke-miterlimit: 10; stroke-width: 2px;"/>
+          <line x1="1014.0882" y1="155.8949" x2="1014.0882" y2="201.8647" style="fill: none; stroke: currentColor; stroke-miterlimit: 10; stroke-width: 2px;"/>
+          <polyline points="1046.2308 159.4887 1047.5388 204.1813 1047.5388 222.1998" style="fill: none; stroke: currentColor; stroke-miterlimit: 10; stroke-width: 2px;"/>
+          <polyline points="1071.2202 339.0625 1023.376 349.844 1011.8435 325.1625" style="fill: none; stroke: currentColor; stroke-miterlimit: 10; stroke-width: 2px;"/>
+          <line x1="1019.7388" y1="324.1329" x2="1006.8455" y2="326.1922" style="fill: none; stroke: currentColor; stroke-miterlimit: 10; stroke-width: 2px;"/>
+          <polyline points="1023.376 349.844 1009.3473 365.0606 959.5725 365.0606" style="fill: none; stroke: currentColor; stroke-miterlimit: 10; stroke-width: 2px;"/>
+          <path d="M1069.1609,360.155l-1.287,25.7555s-.5148,7.4648-6.95,18.0185-7.4648,12.3555-7.4648,12.3555h-49.9369l-7.4648-3.3463-36.4849-.0296" style="fill: none; stroke: currentColor; stroke-miterlimit: 10; stroke-width: 2px;"/>
+          <path d="M959.5725,394.9198h47.273s-2.0363,6.4352-5.1252,9.0092-5.6629,4.1185-5.6629,4.1185h-36.4849" style="fill: none; stroke: currentColor; stroke-miterlimit: 10; stroke-width: 2px;"/>
+          <path d="M959.5725,242.0201s2.2498-4.6333,11.259-9.7815c9.0092-5.1481,12.3775-6.95,12.3775-6.95,0,0,15.9373-.7722,36.5298,0s30.1166,3.0889,30.1166,3.0889" style="fill: none; stroke: currentColor; stroke-miterlimit: 10; stroke-width: 2px;"/>
+        </g>
+      </g>
+    </g>
+  </g>
+  <g>
+    <g id="_Mirror_Repeat_-3" data-name="&amp;lt;Mirror Repeat&amp;gt;">
+      <g style="clip-path: url(#front-clippath-2);">
+        <path fill="currentColor" d="M866.0387,416.2847s-1.0298-1.8019-7.4648-12.3555c-6.4352-10.5536-6.95-18.0185-6.95-18.0185l-.3334-6.6697c-1.2833,1.1379-2.0966,2.7941-2.0966,4.6442v65.1742c0,4.9293,3.9958,8.9253,8.9253,8.9253h13.8104c4.9293,0,8.9253-3.996,8.9253-8.9253v-32.7746h-14.8163Z"/>
+      </g>
+    </g>
+    <g id="_Mirror_Repeat_-4" data-name="&amp;lt;Mirror Repeat&amp;gt;">
+      <g style="clip-path: url(#front-clippath-3);">
+        <path fill="currentColor" d="M1053.307,416.2847s1.0298-1.8019,7.4648-12.3555c6.4352-10.5536,6.95-18.0185,6.95-18.0185l.3334-6.6697c1.2833,1.1379,2.0966,2.7941,2.0966,4.6442v65.1742c0,4.9293-3.9958,8.9253-8.9253,8.9253h-13.8104c-4.9293,0-8.9253-3.996-8.9253-8.9253v-32.7746h14.8163Z"/>
+      </g>
+    </g>
+  </g>
+  <rect x="938.0506" y="376.9311" width="43.2443" height="17.5037" style="fill: none; stroke: currentColor; stroke-miterlimit: 10; stroke-width: 2px;"/>
+</svg>
