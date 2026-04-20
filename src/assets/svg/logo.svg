@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 80" fill="none">
+  <g>
+    <rect x="1.5" y="1.5" width="77" height="77" stroke="currentColor" stroke-width="3" fill="none"></rect>
+    <path d="M22.5 26.5 L57.5 26.5 L40 57 Z" fill="currentColor"></path>
+  </g>
+  <g fill="currentColor">
+    <text x="96" y="44" font-family="Michroma, &#39;IBM Plex Sans&#39;, sans-serif" font-size="15" letter-spacing="0.06em">FLEET VAN</text>
+    <text x="96" y="62" font-family="&#39;Space Mono&#39;, monospace" font-size="10" textLength="87" lengthAdjust="spacing" fill-opacity="0.6">SYSTEMS</text>
+  </g>
+</svg>

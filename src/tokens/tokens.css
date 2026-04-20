@@ -1,0 +1,270 @@
+/* ============================================================
+   Fleet Van Systems — Core Tokens
+   Inspired by NASA mission control + early IBM industrial design
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=IBM+Plex+Serif:wght@400;500;600;700&display=swap');
+
+@font-face {
+  font-family: 'Michroma';
+  src: url('fonts/Michroma-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Space Mono';
+  src: url('fonts/SpaceMono-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Space Mono';
+  src: url('fonts/SpaceMono-Italic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Space Mono';
+  src: url('fonts/SpaceMono-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Space Mono';
+  src: url('fonts/SpaceMono-BoldItalic.ttf') format('truetype');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+:root {
+  /* ------------- Neutral scale (the foundation) ------------- */
+  --fvs-black:       #0A0A0B;   /* near-black, used for chrome + console */
+  --fvs-ink:         #151517;   /* primary ink on light */
+  --fvs-graphite:    #2A2A2E;   /* secondary dark surface */
+  --fvs-slate:       #4A4A52;   /* body copy on light, secondary text on dark */
+  --fvs-steel:       #8A8A93;   /* tertiary text, muted labels */
+  --fvs-fog:         #C4C4CB;   /* hairlines, dividers on light */
+  --fvs-bone:        #E4E4E2;   /* subtle fills, rails */
+  --fvs-paper:       #F2F1EE;   /* primary light background (warm, slightly off-white) */
+  --fvs-white:       #FBFAF7;   /* cards / elevated surfaces on light */
+
+  /* ------------- Signal / semantic (restrained) ------------- */
+  --fvs-amber:       #E8A33D;   /* NASA phosphor accent — "live", active */
+  --fvs-amber-dim:   #8A5E1F;
+  --fvs-green:       #4DA35A;   /* nominal / ok */
+  --fvs-red:         #C8402C;   /* alert / fault */
+  --fvs-blue:        #3A6EA8;   /* informational, reserved */
+
+  /* ------------- Role tokens (light theme default) --------- */
+  --bg:              var(--fvs-paper);
+  --bg-elevated:     var(--fvs-white);
+  --bg-inset:        var(--fvs-bone);
+  --bg-console:      var(--fvs-black);
+
+  --fg:              var(--fvs-ink);
+  --fg-muted:        var(--fvs-slate);
+  --fg-subtle:       var(--fvs-steel);
+  --fg-inverse:      var(--fvs-paper);
+
+  --line:            var(--fvs-fog);
+  --line-strong:     var(--fvs-slate);
+  --line-hair:       rgba(21, 21, 23, 0.08);
+
+  --accent:          var(--fvs-amber);
+  --nominal:         var(--fvs-green);
+  --alert:           var(--fvs-red);
+  --info:            var(--fvs-blue);
+
+  /* ------------- Type families ---------------------------- */
+  --font-sans:       'IBM Plex Sans', ui-sans-serif, system-ui, sans-serif;
+  --font-mono:       'Space Mono', ui-monospace, 'SFMono-Regular', Menlo, monospace;
+  --font-serif:      'IBM Plex Serif', ui-serif, Georgia, serif;
+  --font-display:    'Michroma', 'IBM Plex Sans', sans-serif;  /* brand display — geometric, aerospace */
+
+  /* ------------- Type scale (modular, small steps) -------- */
+  --t-micro:         10px;   /* UPPER-CASE META, STATUS PILLS */
+  --t-tiny:          11px;   /* table cells, dense tables */
+  --t-small:         13px;   /* default UI label / body-small */
+  --t-body:          15px;   /* body copy */
+  --t-body-lg:       17px;   /* lead paragraph */
+  --t-h4:            20px;
+  --t-h3:            26px;
+  --t-h2:            34px;
+  --t-h1:            44px;
+  --t-display:       64px;
+  --t-hero:          88px;
+
+  --lh-tight:        1.05;
+  --lh-snug:         1.2;
+  --lh-normal:       1.45;
+  --lh-loose:        1.6;
+
+  --tr-tight:        -0.02em;
+  --tr-label:        0.12em;   /* for UPPERCASE LABELS */
+  --tr-data:         0.02em;
+
+  /* ------------- Spacing (4px grid) ----------------------- */
+  --s-0:  0;
+  --s-1:  2px;
+  --s-2:  4px;
+  --s-3:  8px;
+  --s-4:  12px;
+  --s-5:  16px;
+  --s-6:  20px;
+  --s-7:  24px;
+  --s-8:  32px;
+  --s-9:  40px;
+  --s-10: 56px;
+  --s-11: 72px;
+  --s-12: 96px;
+
+  /* ------------- Radius (hard, instrument-like) ----------- */
+  --r-0: 0px;
+  --r-1: 2px;
+  --r-2: 4px;
+  --r-3: 6px;
+  --r-4: 8px;
+  --r-pill: 999px;
+
+  /* ------------- Shadow (subtle, engineered) -------------- */
+  --shadow-hair:   inset 0 0 0 1px var(--line-hair);
+  --shadow-inset:  inset 0 1px 0 rgba(255,255,255,0.6), inset 0 -1px 0 rgba(21,21,23,0.06);
+  --shadow-1:      0 1px 0 rgba(21,21,23,0.04), 0 1px 2px rgba(21,21,23,0.06);
+  --shadow-2:      0 1px 0 rgba(21,21,23,0.04), 0 4px 12px rgba(21,21,23,0.08);
+  --shadow-3:      0 2px 0 rgba(21,21,23,0.04), 0 12px 32px rgba(21,21,23,0.10);
+  --shadow-console:0 0 0 1px rgba(232,163,61,0.15), 0 0 32px rgba(232,163,61,0.08);
+
+  /* ------------- Motion ----------------------------------- */
+  --ease-std:        cubic-bezier(0.2, 0.0, 0.1, 1.0);
+  --ease-in:         cubic-bezier(0.4, 0.0, 1.0, 1.0);
+  --ease-out:        cubic-bezier(0.0, 0.0, 0.2, 1.0);
+  --dur-fast:        120ms;
+  --dur-med:         200ms;
+  --dur-slow:        320ms;
+}
+
+/* ============================================================
+   Dark / Console theme — for dashboards, telemetry, night mode
+   ============================================================ */
+[data-theme="console"] {
+  --bg:              #0A0A0B;
+  --bg-elevated:     #151517;
+  --bg-inset:        #1E1E22;
+  --bg-console:      #000000;
+
+  --fg:              #E8E7E2;
+  --fg-muted:        #A8A8AE;
+  --fg-subtle:       #6A6A72;
+  --fg-inverse:      #0A0A0B;
+
+  --line:            #2A2A2E;
+  --line-strong:     #4A4A52;
+  --line-hair:       rgba(255,255,255,0.06);
+}
+
+/* ============================================================
+   Semantic elements — drop into any doc to get "the look"
+   ============================================================ */
+
+html, body {
+  font-family: var(--font-sans);
+  font-size:   var(--t-body);
+  line-height: var(--lh-normal);
+  color:       var(--fg);
+  background:  var(--bg);
+  font-feature-settings: "ss01", "cv11"; /* IBM Plex stylistic alternates */
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+h1, .h1 {
+  font-family: var(--font-sans);
+  font-size:   var(--t-h1);
+  line-height: var(--lh-tight);
+  letter-spacing: var(--tr-tight);
+  font-weight: 500;
+  color: var(--fg);
+}
+h2, .h2 {
+  font-family: var(--font-sans);
+  font-size:   var(--t-h2);
+  line-height: var(--lh-snug);
+  letter-spacing: var(--tr-tight);
+  font-weight: 500;
+}
+h3, .h3 {
+  font-family: var(--font-sans);
+  font-size:   var(--t-h3);
+  line-height: var(--lh-snug);
+  font-weight: 500;
+}
+h4, .h4 {
+  font-family: var(--font-sans);
+  font-size:   var(--t-h4);
+  line-height: var(--lh-snug);
+  font-weight: 600;
+}
+
+p, .body {
+  font-size:   var(--t-body);
+  line-height: var(--lh-normal);
+  color:       var(--fg);
+  max-width:   68ch;
+}
+
+small, .small {
+  font-size:   var(--t-small);
+  color:       var(--fg-muted);
+}
+
+code, pre, .mono {
+  font-family: var(--font-mono);
+  font-size:   0.92em;
+  letter-spacing: var(--tr-data);
+}
+
+.label, .eyebrow {
+  font-family: var(--font-mono);
+  font-size:   var(--t-micro);
+  letter-spacing: var(--tr-label);
+  text-transform: uppercase;
+  color: var(--fg-muted);
+  font-weight: 500;
+}
+
+.display {
+  font-family: var(--font-display);
+  font-size: var(--t-display);
+  line-height: 1.1;
+  letter-spacing: 0.02em;
+  font-weight: 400;  /* Michroma only ships 400 */
+  text-transform: uppercase;
+}
+
+.serif-display {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  font-style: italic;
+}
+
+.data {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: var(--tr-data);
+}
+
+hr, .rule {
+  border: none;
+  border-top: 1px solid var(--line);
+  margin: var(--s-7) 0;
+}
+.rule--strong { border-top-color: var(--line-strong); }
+.rule--double {
+  border-top: 3px double var(--line-strong);
+}
