@@ -14,23 +14,40 @@ interface SwatchProps {
   role?: string;
 }
 
+function swatchTextColor(colorStr: string): string {
+  let r = 0, g = 0, b = 0;
+  if (colorStr.startsWith('#') && colorStr.length >= 7) {
+    r = parseInt(colorStr.slice(1, 3), 16);
+    g = parseInt(colorStr.slice(3, 5), 16);
+    b = parseInt(colorStr.slice(5, 7), 16);
+  } else {
+    const m = colorStr.match(/\d+/g);
+    if (m && m.length >= 3) { r = +m[0]; g = +m[1]; b = +m[2]; }
+  }
+  const lin = (c: number) => { const v = c / 255; return v <= 0.04045 ? v / 12.92 : ((v + 0.055) / 1.055) ** 2.4; };
+  const L = 0.2126 * lin(r) + 0.7152 * lin(g) + 0.0722 * lin(b);
+  return L > 0.177 ? 'var(--fvs-ink)' : 'var(--fvs-white)';
+}
+
 function Swatch({ name, value, role }: SwatchProps) {
   const [resolved, setResolved] = useState('');
+  const ref = React.useRef<HTMLDivElement>(null);
+
   useEffect(() => {
     if (value.startsWith('var(')) {
-      setResolved(resolveToken(value.slice(4, -1)));
+      const varName = value.slice(4, -1);
+      const el = ref.current;
+      const val = el
+        ? getComputedStyle(el).getPropertyValue(varName).trim()
+        : resolveToken(varName);
+      setResolved(val);
     } else {
       setResolved(value);
     }
   }, [value]);
 
-  const isLight = resolved && (
-    resolved === '#FBFAF7' || resolved === '#F2F1EE' || resolved === '#E4E4E2' ||
-    resolved === '#C4C4CB'
-  );
-
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', gap: 6, width: 160 }}>
+    <div ref={ref} style={{ display: 'flex', flexDirection: 'column', gap: 6, width: 160 }}>
       <div
         style={{
           width: '100%',
@@ -48,8 +65,7 @@ function Swatch({ name, value, role }: SwatchProps) {
             fontFamily: 'var(--font-mono)',
             fontSize: 10,
             letterSpacing: '0.06em',
-            color: isLight ? 'var(--fvs-ink)' : 'var(--fvs-paper)',
-            opacity: 0.7,
+            color: swatchTextColor(resolved),
           }}>
             {resolved}
           </span>

@@ -69,7 +69,7 @@
 
   --fg:              var(--fvs-ink);
   --fg-muted:        var(--fvs-slate);
-  --fg-subtle:       var(--fvs-steel);
+  --fg-subtle:       #6C6C74;   /* 4.60:1 on --bg (#F2F1EE) — WCAG AA */
   --fg-inverse:      var(--fvs-paper);
 
   --line:            var(--fvs-fog);
@@ -77,9 +77,11 @@
   --line-hair:       rgba(21, 21, 23, 0.08);
 
   --accent:          var(--fvs-amber);
-  --nominal:         var(--fvs-green);
-  --alert:           var(--fvs-red);
-  --info:            var(--fvs-blue);
+  --nominal:         #2D7A38;           /* accessible green 4.71:1 on --bg — WCAG AA */
+  --live:            var(--fvs-amber-dim); /* accessible amber text 5.03:1 on --bg — WCAG AA */
+  --alert:           #BE3D2A;           /* accessible red 4.78:1 on --bg — WCAG AA */
+  --info:            var(--fvs-blue);   /* 4.68:1 on --bg — WCAG AA */
+  --offline:         #6C6C74;           /* accessible gray 4.60:1 on --bg — WCAG AA */
 
   /* ------------- Type families ---------------------------- */
   --font-sans:       'IBM Plex Sans', ui-sans-serif, system-ui, sans-serif;
@@ -160,12 +162,18 @@
 
   --fg:              #E8E7E2;
   --fg-muted:        #A8A8AE;
-  --fg-subtle:       #6A6A72;
+  --fg-subtle:       #7E7E88;   /* 4.55:1 on --bg-elevated (#151517) — WCAG AA */
   --fg-inverse:      #0A0A0B;
 
   --line:            #2A2A2E;
   --line-strong:     #4A4A52;
   --line-hair:       rgba(255,255,255,0.06);
+
+  /* Signal tokens: accessible values for dark backgrounds */
+  --nominal:         var(--fvs-green);   /* 6.32:1 on --bg, 5.82:1 on --bg-elevated */
+  --live:            var(--fvs-amber);   /* 9.55:1 on --bg, 8.46:1 on --bg-elevated */
+  --alert:           #D85D4A;           /* 5.26:1 on --bg, 4.85:1 on --bg-elevated — WCAG AA */
+  --offline:         var(--fvs-steel);   /* 6.02:1 on --bg, 5.33:1 on --bg-elevated */
 }
 
 /* ============================================================

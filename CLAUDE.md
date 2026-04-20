@@ -82,6 +82,7 @@ Branches use sequential numbering: `1-short-name`, `2-short-name`, etc. The numb
 The project constitution is at `.specify/memory/constitution.md` (v1.0.0, ratified 2026-04-19). Five principles: Engineered Aesthetics, Token-First Architecture, Component Isolation via Storybook, Content Voice Compliance, Keyboard-First Accessibility. The constitution is **non-negotiable** — all specs, plans, and task lists must comply with it. Use `/speckit.constitution` to edit it.
 
 ## Active Technologies
+- TypeScript 5.x (strict mode) + React 18 (useId hook available), Storybook 8 + addon-a11y (axe-core), Tailwind CSS 3 (002-fix-a11y-violations)
 
 From `001-initial-site`:
 
@@ -146,6 +147,7 @@ npm run typecheck          # tsc --noEmit
 - No `any` — use `unknown` + type narrowing when necessary
 
 ## Recent Changes
+- 002-fix-a11y-violations: Added TypeScript 5.x (strict mode) + React 18 (useId hook available), Storybook 8 + addon-a11y (axe-core), Tailwind CSS 3
 
 - **2026-04-19** — `001-initial-site`: Initial Storybook design system site. 6 components (Button, Badge, Card, Input, DataTable, Divider), 6 token sections (Colors, Typography, Spacing, Radius, Shadows, Motion), brand section (Logo, Typography specimens, Iconography, Voice). Light/console theme toggle via addon-themes.
 

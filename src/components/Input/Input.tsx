@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useId } from 'react';
 
 // ── Shared label/hint styles ──────────────────────────────────────────────────
 
@@ -18,7 +18,7 @@ const hintStyle: React.CSSProperties = {
 
 const errorStyle: React.CSSProperties = {
   ...hintStyle,
-  color: 'var(--fvs-red)',
+  color: 'var(--alert)',
 };
 
 const fieldWrap: React.CSSProperties = {
@@ -42,16 +42,20 @@ export interface InputProps {
 
 export function Input({ label, type = 'text', value, placeholder, hint, error, disabled, onChange }: InputProps) {
   const [focused, setFocused] = React.useState(false);
+  const id = useId();
+  const hintId = useId();
 
   return (
     <div style={fieldWrap}>
-      <label style={labelStyle}>{label}</label>
+      <label htmlFor={id} style={labelStyle}>{label}</label>
       <input
+        id={id}
         type={type}
         value={value}
         placeholder={placeholder}
         disabled={disabled}
         onChange={onChange}
+        aria-describedby={hint || error ? hintId : undefined}
         onFocus={() => setFocused(true)}
         onBlur={() => setFocused(false)}
         style={{
@@ -63,7 +67,7 @@ export function Input({ label, type = 'text', value, placeholder, hint, error, d
           border: `1px solid ${error ? 'var(--fvs-red)' : focused ? 'var(--fvs-ink)' : 'var(--line)'}`,
           borderRadius: 'var(--r-1)',
           padding: '8px 10px',
-          outline: focused ? '2px solid var(--fvs-amber)' : 'none',
+          outline: focused ? '2px solid var(--fvs-amber)' : '2px solid transparent',
           outlineOffset: 2,
           transition: 'border-color var(--dur-fast)',
           boxSizing: 'border-box',
@@ -72,7 +76,7 @@ export function Input({ label, type = 'text', value, placeholder, hint, error, d
         }}
       />
       {(hint || error) && (
-        <span style={error ? errorStyle : hintStyle}>{error ?? hint}</span>
+        <span id={hintId} style={error ? errorStyle : hintStyle}>{error ?? hint}</span>
       )}
     </div>
   );
@@ -92,14 +96,18 @@ export interface SelectProps {
 
 export function Select({ label, options, value, hint, error, disabled, onChange }: SelectProps) {
   const [focused, setFocused] = React.useState(false);
+  const id = useId();
+  const hintId = useId();
 
   return (
     <div style={fieldWrap}>
-      <label style={labelStyle}>{label}</label>
+      <label htmlFor={id} style={labelStyle}>{label}</label>
       <select
+        id={id}
         value={value}
         disabled={disabled}
         onChange={onChange}
+        aria-describedby={hint || error ? hintId : undefined}
         onFocus={() => setFocused(true)}
         onBlur={() => setFocused(false)}
         style={{
@@ -110,7 +118,7 @@ export function Select({ label, options, value, hint, error, disabled, onChange 
           border: `1px solid ${focused ? 'var(--fvs-ink)' : 'var(--line)'}`,
           borderRadius: 'var(--r-1)',
           padding: '8px 10px',
-          outline: focused ? '2px solid var(--fvs-amber)' : 'none',
+          outline: focused ? '2px solid var(--fvs-amber)' : '2px solid transparent',
           outlineOffset: 2,
           opacity: disabled ? 0.45 : 1,
           cursor: disabled ? 'not-allowed' : 'default',
@@ -122,7 +130,7 @@ export function Select({ label, options, value, hint, error, disabled, onChange 
         ))}
       </select>
       {(hint || error) && (
-        <span style={error ? errorStyle : hintStyle}>{error ?? hint}</span>
+        <span id={hintId} style={error ? errorStyle : hintStyle}>{error ?? hint}</span>
       )}
     </div>
   );
@@ -140,20 +148,23 @@ export interface ToggleProps {
 }
 
 export function Toggle({ label, checked, onLabel = 'On', offLabel = 'Off', disabled, onChange }: ToggleProps) {
+  const labelId = useId();
+
   return (
     <div style={fieldWrap}>
-      <span style={labelStyle}>{label}</span>
+      <span id={labelId} style={labelStyle}>{label}</span>
       <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
         <button
           role="switch"
           aria-checked={checked}
+          aria-labelledby={labelId}
           disabled={disabled}
           onClick={() => onChange?.(!checked)}
           onFocus={(e) => {
             e.currentTarget.style.outline = '2px solid var(--fvs-amber)';
             e.currentTarget.style.outlineOffset = '2px';
           }}
-          onBlur={(e) => { e.currentTarget.style.outline = 'none'; }}
+          onBlur={(e) => { e.currentTarget.style.outline = '2px solid transparent'; }}
           style={{
             position: 'relative',
             width: 44,
@@ -163,6 +174,8 @@ export function Toggle({ label, checked, onLabel = 'On', offLabel = 'Off', disab
             borderRadius: 'var(--r-1)',
             cursor: disabled ? 'not-allowed' : 'pointer',
             padding: 0,
+            outline: '2px solid transparent',
+            outlineOffset: '2px',
             transition: 'background var(--dur-fast), border-color var(--dur-fast)',
             flexShrink: 0,
             opacity: disabled ? 0.45 : 1,
@@ -184,7 +197,7 @@ export function Toggle({ label, checked, onLabel = 'On', offLabel = 'Off', disab
           fontSize: 11,
           letterSpacing: '0.1em',
           textTransform: 'uppercase',
-          color: checked ? 'var(--fvs-amber)' : 'var(--fg-subtle)',
+          color: checked ? 'var(--live)' : 'var(--fg-subtle)',
         }}>
           {checked ? onLabel : offLabel}
         </span>
@@ -203,18 +216,21 @@ export interface CheckboxProps {
 }
 
 export function Checkbox({ label, checked, disabled, onChange }: CheckboxProps) {
+  const labelId = useId();
+
   return (
     <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
       <button
         role="checkbox"
         aria-checked={checked}
+        aria-labelledby={labelId}
         disabled={disabled}
         onClick={() => onChange?.(!checked)}
         onFocus={(e) => {
           e.currentTarget.style.outline = '2px solid var(--fvs-amber)';
           e.currentTarget.style.outlineOffset = '2px';
         }}
-        onBlur={(e) => { e.currentTarget.style.outline = 'none'; }}
+        onBlur={(e) => { e.currentTarget.style.outline = '2px solid transparent'; }}
         style={{
           width: 16,
           height: 16,
@@ -227,6 +243,8 @@ export function Checkbox({ label, checked, disabled, onChange }: CheckboxProps) 
           justifyContent: 'center',
           cursor: disabled ? 'not-allowed' : 'pointer',
           padding: 0,
+          outline: '2px solid transparent',
+          outlineOffset: '2px',
           flexShrink: 0,
           opacity: disabled ? 0.45 : 1,
           fontSize: 11,
@@ -235,7 +253,7 @@ export function Checkbox({ label, checked, disabled, onChange }: CheckboxProps) 
       >
         {checked ? '✓' : ''}
       </button>
-      <span style={{ fontFamily: 'var(--font-sans)', fontSize: 13, color: 'var(--fg)' }}>
+      <span id={labelId} style={{ fontFamily: 'var(--font-sans)', fontSize: 13, color: 'var(--fg)' }}>
         {label}
       </span>
     </div>

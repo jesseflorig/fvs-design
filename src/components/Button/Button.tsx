@@ -24,7 +24,8 @@ const base: React.CSSProperties = {
   alignItems: 'center',
   justifyContent: 'center',
   transition: 'all var(--dur-fast) var(--ease-std)',
-  outline: 'none',
+  outline: '2px solid transparent',
+  outlineOffset: '2px',
 };
 
 const variants: Record<ButtonVariant, React.CSSProperties> = {
@@ -58,8 +59,8 @@ const variants: Record<ButtonVariant, React.CSSProperties> = {
   },
   danger: {
     background: 'transparent',
-    color: 'var(--fvs-red)',
-    border: '1px solid var(--fvs-red)',
+    color: 'var(--alert)',
+    border: '1px solid var(--alert)',
     padding: '9px 16px',
   },
   icon: {
@@ -120,7 +121,7 @@ export function Button({
         e.currentTarget.style.outlineOffset = '2px';
       }}
       onBlur={(e) => {
-        e.currentTarget.style.outline = 'none';
+        e.currentTarget.style.outline = '2px solid transparent';
       }}
     >
       {children}

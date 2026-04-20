@@ -10,11 +10,11 @@ export interface BadgeProps {
 }
 
 const statusColors: Record<BadgeStatus, string> = {
-  nominal: 'var(--fvs-green)',
-  live:    'var(--fvs-amber)',
-  fault:   'var(--fvs-red)',
-  info:    'var(--fvs-blue)',
-  offline: 'var(--fvs-steel)',
+  nominal: 'var(--nominal)',
+  live:    'var(--live)',
+  fault:   'var(--alert)',
+  info:    'var(--info)',
+  offline: 'var(--offline)',
   neutral: 'var(--fg)',
 };
 
@@ -60,7 +60,7 @@ export function Badge({ status = 'neutral', label, showDot = true, solid = false
   return (
     <span style={style}>
       {defaultShowDot && (
-        <span style={{
+        <span aria-hidden="true" style={{
           width: 6,
           height: 6,
           borderRadius: 'var(--r-pill)',
