@@ -14,9 +14,9 @@ export interface DataTableProps {
 }
 
 const statusColorMap = {
-  nominal: 'var(--fvs-green)',
-  fault:   'var(--fvs-red)',
-  live:    'var(--fvs-amber)',
+  nominal: 'var(--nominal)',
+  fault:   'var(--alert)',
+  live:    'var(--live)',
 };
 
 export function DataTable({ columns, rows, caption }: DataTableProps) {
@@ -35,6 +35,7 @@ export function DataTable({ columns, rows, caption }: DataTableProps) {
             {columns.map(col => (
               <th
                 key={col.key}
+                scope="col"
                 style={{
                   textAlign: col.align === 'right' ? 'right' : 'left',
                   fontWeight: 500,

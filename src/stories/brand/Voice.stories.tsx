@@ -46,7 +46,7 @@ export const Guidelines: StoryObj = {
             '"Engage climate preset: Overnight."',
             '"Off-grid, on-mission."',
           ].map(text => (
-            <div key={text} style={{ fontFamily: 'var(--font-mono)', fontSize: 12, color: 'var(--fvs-green)', padding: '8px 12px', background: 'var(--bg-inset)', borderLeft: '2px solid var(--fvs-green)', borderRadius: '0 2px 2px 0' }}>
+            <div key={text} style={{ fontFamily: 'var(--font-mono)', fontSize: 12, color: 'var(--nominal)', padding: '8px 12px', background: 'var(--bg)', borderLeft: '2px solid var(--nominal)', borderRadius: '0 2px 2px 0' }}>
               {text}
             </div>
           ))}
@@ -61,7 +61,7 @@ export const Guidelines: StoryObj = {
             '"Oops! Something went wrong" — wrong tone',
             '"Let\'s get you set up!" — too casual',
           ].map(text => (
-            <div key={text} style={{ fontFamily: 'var(--font-mono)', fontSize: 12, color: 'var(--fvs-red)', padding: '8px 12px', background: 'var(--bg-inset)', borderLeft: '2px solid var(--fvs-red)', borderRadius: '0 2px 2px 0' }}>
+            <div key={text} style={{ fontFamily: 'var(--font-mono)', fontSize: 12, color: 'var(--alert)', padding: '8px 12px', background: 'var(--bg)', borderLeft: '2px solid var(--alert)', borderRadius: '0 2px 2px 0' }}>
               {text}
             </div>
           ))}
