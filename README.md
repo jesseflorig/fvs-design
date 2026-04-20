@@ -40,8 +40,6 @@ npm run mcp              # Storybook MCP server → http://localhost:6007/mcp
 
 Logo, type specimens (Michroma, Space Mono, IBM Plex Sans/Serif), iconography rules, and voice guidelines.
 
----
-
 ## Design tokens
 
 All values are CSS custom properties defined in `src/tokens/tokens.css`. Two themes:
@@ -50,8 +48,6 @@ All values are CSS custom properties defined in `src/tokens/tokens.css`. Two the
 - **Console** — dark telemetry mode (`--bg: #0A0A0B`), toggled via `data-theme="console"`
 
 No hardcoded hex, px, or timing values in component code. Token changes propagate everywhere.
-
----
 
 ## Fonts
 
@@ -62,13 +58,9 @@ No hardcoded hex, px, or timing values in component code. Token changes propagat
 | IBM Plex Sans | Body, UI | Google Fonts CDN |
 | IBM Plex Serif | Long-form | Google Fonts CDN |
 
----
-
 ## Accessibility
 
 WCAG 2.1 AA target. All interactive components are keyboard-operable. Focus state: 2px solid amber (`--accent`) with 2px offset. Color is never the sole differentiator for state.
-
----
 
 ## Storybook MCP
 
@@ -80,8 +72,6 @@ npm run mcp   # starts at http://localhost:6007/mcp
 
 Requires Storybook running on port 6006. Configured in `.claude/settings.json`.
 
----
-
 ## Development workflow
 
 Features move through discrete phases using the spec-kit framework (`.specify/`):
@@ -91,8 +81,6 @@ specify → clarify → plan → tasks → analyze → implement
 ```
 
 Slash commands via Claude Code: `/speckit.specify`, `/speckit.plan`, `/speckit.tasks`, `/speckit.implement`, and others. See `CLAUDE.md` for full reference.
-
----
 
 ## Constitution
 
