@@ -9,7 +9,8 @@
     "typecheck": "tsc --noEmit",
     "test": "vitest",
     "coverage": "vitest --run --coverage",
-    "mcp": "node scripts/storybook-mcp.mjs"
+    "mcp": "node scripts/storybook-mcp.mjs",
+    "chromatic": "npx chromatic --project-token=chpt_f9c215e91161d3f"
   },
   "dependencies": {
     "lucide-react": "^0.475.0",
@@ -31,6 +32,7 @@
     "@vitest/coverage-istanbul": "^4.1.4",
     "@vitest/runner": "^4.1.4",
     "autoprefixer": "^10.4.21",
+    "chromatic": "^16.3.0",
     "postcss": "^8.5.3",
     "storybook": "^10.3.5",
     "tailwindcss": "^3.4.17",
