@@ -1,4 +1,5 @@
 import type { StorybookConfig } from '@storybook/react-vite';
+import svgr from 'vite-plugin-svgr';
 
 const config: StorybookConfig = {
   stories: ['../src/**/*.stories.@(ts|tsx)'],
@@ -17,6 +18,11 @@ const config: StorybookConfig = {
 
   features: {
     componentsManifest: true,
+  },
+
+  viteFinal: async (config) => {
+    config.plugins = [...(config.plugins ?? []), svgr()];
+    return config;
   },
 };
 
