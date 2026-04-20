@@ -4,8 +4,6 @@ Component library and design language reference for Fleet Van Systems. Built wit
 
 Design language: NASA mission control meets early IBM industrial. Black, off-white, amber. No decoration — whitespace and hairlines do the work.
 
----
-
 ## Quick start
 
 ```bash
@@ -15,8 +13,6 @@ npm run build-storybook  # Static export
 npm run typecheck        # tsc --noEmit
 npm run mcp              # Storybook MCP server → http://localhost:6007/mcp
 ```
-
----
 
 ## Components
 
