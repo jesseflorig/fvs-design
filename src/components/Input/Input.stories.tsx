@@ -4,6 +4,7 @@ import { Input, Select, Toggle, Checkbox } from './Input';
 
 const meta: Meta = {
   title: 'Components/Input',
+  tags: ['autodocs'],
   parameters: { controls: { disable: true } },
 };
 export default meta;

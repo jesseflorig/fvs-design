@@ -5,6 +5,7 @@ import { DataTable } from './DataTable';
 const meta: Meta<typeof DataTable> = {
   title: 'Components/DataTable',
   component: DataTable,
+  tags: ['autodocs'],
   parameters: { controls: { disable: true } },
 };
 export default meta;

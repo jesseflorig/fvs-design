@@ -5,6 +5,7 @@ import { Badge } from './Badge';
 const meta: Meta<typeof Badge> = {
   title: 'Components/Badge',
   component: Badge,
+  tags: ['autodocs'],
   argTypes: {
     status:  { control: 'select', options: ['nominal', 'live', 'fault', 'info', 'offline', 'neutral'] },
     showDot: { control: 'boolean' },
