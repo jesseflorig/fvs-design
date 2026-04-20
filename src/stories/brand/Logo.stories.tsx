@@ -29,11 +29,11 @@ export const OnDark: StoryObj = {
   render: () => (
     <div style={{ background: 'var(--fvs-black)', padding: 48, display: 'flex', flexDirection: 'column', gap: 40, alignItems: 'flex-start' }}>
       <div>
-        <div style={{ fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: '0.1em', textTransform: 'uppercase', color: '#6A6A72', marginBottom: 16 }}>Logotype</div>
+        <div style={{ fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--fvs-steel)', marginBottom: 16 }}>Logotype</div>
         <LogoSvg aria-label="Fleet Van Systems logotype" style={{ height: 48, color: 'var(--fvs-paper)' }} />
       </div>
       <div>
-        <div style={{ fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: '0.1em', textTransform: 'uppercase', color: '#6A6A72', marginBottom: 16 }}>Mark</div>
+        <div style={{ fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--fvs-steel)', marginBottom: 16 }}>Mark</div>
         <MarkSvg aria-label="Fleet Van Systems mark" style={{ height: 48, color: 'var(--fvs-paper)' }} />
       </div>
     </div>
