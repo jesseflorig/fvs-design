@@ -84,6 +84,7 @@ The project constitution is at `.specify/memory/constitution.md` (v1.0.0, ratifi
 ## Active Technologies
 - TypeScript 5.x (strict mode) + React 18 (useId hook available), Storybook 8 + addon-a11y (axe-core), Tailwind CSS 3 (002-fix-a11y-violations)
 - TypeScript 5.x (strict mode) + React 18, Tailwind CSS 3, Storybook 8 + addon-a11y (003-gauge-component)
+- TypeScript 5.x (strict mode) + React 18 (useId, useRef, useState, useCallback), Storybook 8 + addon-a11y (004-slider-component)
 
 From `001-initial-site`:
 
@@ -148,9 +149,9 @@ npm run typecheck          # tsc --noEmit
 - No `any` — use `unknown` + type narrowing when necessary
 
 ## Recent Changes
+- 004-slider-component: Added TypeScript 5.x (strict mode) + React 18 (useId, useRef, useState, useCallback), Storybook 8 + addon-a11y
 - 003-gauge-component: Added TypeScript 5.x (strict mode) + React 18, Tailwind CSS 3, Storybook 8 + addon-a11y
 - 002-fix-a11y-violations: Added TypeScript 5.x (strict mode) + React 18 (useId hook available), Storybook 8 + addon-a11y (axe-core), Tailwind CSS 3
 
-- **2026-04-19** — `001-initial-site`: Initial Storybook design system site. 6 components (Button, Badge, Card, Input, DataTable, Divider), 6 token sections (Colors, Typography, Spacing, Radius, Shadows, Motion), brand section (Logo, Typography specimens, Iconography, Voice). Light/console theme toggle via addon-themes.
 
 **Last updated**: 2026-04-20
