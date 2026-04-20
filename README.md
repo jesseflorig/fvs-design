@@ -1,6 +1,6 @@
 # FVS Design System
 
-Component library and design language reference for Fleet Van Systems. Built with Storybook 8, React 18, and TypeScript — the Storybook site is the primary deliverable.
+Component library and design language reference for Fleet Van Systems. Built with [Storybook 10](https://storybook.js.org), [React 18](https://react.dev), and [TypeScript 5](https://www.typescriptlang.org) — the Storybook site is the primary deliverable.
 
 Design language: NASA mission control meets early IBM industrial. Black, off-white, amber. No decoration — whitespace and hairlines do the work.
 
@@ -53,10 +53,10 @@ No hardcoded hex, px, or timing values in component code. Token changes propagat
 
 | Family | Use | Hosting |
 |---|---|---|
-| Michroma | Display / headlines | Self-hosted `.ttf` in `src/assets/fonts/` |
-| Space Mono | Telemetry data, mono labels | Self-hosted `.ttf`, 4 weights |
-| IBM Plex Sans | Body, UI | Google Fonts CDN |
-| IBM Plex Serif | Long-form | Google Fonts CDN |
+| [Michroma](https://fonts.google.com/specimen/Michroma) | Display / headlines | Self-hosted `.ttf` in `src/assets/fonts/` |
+| [Space Mono](https://fonts.google.com/specimen/Space+Mono) | Telemetry data, mono labels | Self-hosted `.ttf`, 4 weights |
+| [IBM Plex Sans](https://fonts.google.com/specimen/IBM+Plex+Sans) | Body, UI | Google Fonts CDN |
+| [IBM Plex Serif](https://fonts.google.com/specimen/IBM+Plex+Serif) | Long-form | Google Fonts CDN |
 
 ## Accessibility
 
@@ -64,7 +64,7 @@ WCAG 2.1 AA target. All interactive components are keyboard-operable. Focus stat
 
 ## Storybook MCP
 
-A Model Context Protocol server exposes component documentation to AI tooling.
+A [Model Context Protocol](https://modelcontextprotocol.io) server exposes component documentation to AI tooling.
 
 ```bash
 npm run mcp   # starts at http://localhost:6007/mcp
@@ -80,7 +80,7 @@ Features move through discrete phases using the spec-kit framework (`.specify/`)
 specify → clarify → plan → tasks → analyze → implement
 ```
 
-Slash commands via Claude Code: `/speckit.specify`, `/speckit.plan`, `/speckit.tasks`, `/speckit.implement`, and others. See `CLAUDE.md` for full reference.
+Slash commands via [Claude Code](https://claude.ai/code): `/speckit.specify`, `/speckit.plan`, `/speckit.tasks`, `/speckit.implement`, and others. See `CLAUDE.md` for full reference.
 
 ## Constitution
 
