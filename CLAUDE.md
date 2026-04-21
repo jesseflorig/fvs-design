@@ -87,6 +87,8 @@ The project constitution is at `.specify/memory/constitution.md` (v1.0.0, ratifi
 - TypeScript 5.x (strict mode) + React 18 (useId, useRef, useState, useCallback), Storybook 8 + addon-a11y (004-slider-component)
 - TypeScript 5.x (strict mode) + `maplibre-gl` (direct, no React wrapper), OpenFreeMap tile service (005-maplibre-tracking)
 - N/A — component is stateless with respect to persistence (005-maplibre-tracking)
+- TypeScript 5.x (strict mode — `noImplicitAny`, `strictNullChecks`) + React 18, Recharts (to be installed), existing `lib/resolve-token.ts` (006-chart-components)
+- N/A — all components are presentational, no persistence (006-chart-components)
 
 From `001-initial-site`:
 
@@ -151,9 +153,9 @@ npm run typecheck          # tsc --noEmit
 - No `any` — use `unknown` + type narrowing when necessary
 
 ## Recent Changes
+- 006-chart-components: Added TypeScript 5.x (strict mode — `noImplicitAny`, `strictNullChecks`) + React 18, Recharts (to be installed), existing `lib/resolve-token.ts`
 - 005-maplibre-tracking: Added TypeScript 5.x (strict mode) + `maplibre-gl` (direct, no React wrapper), OpenFreeMap tile service
 - 004-slider-component: Added TypeScript 5.x (strict mode) + React 18 (useId, useRef, useState, useCallback), Storybook 8 + addon-a11y
-- 003-gauge-component: Added TypeScript 5.x (strict mode) + React 18, Tailwind CSS 3, Storybook 8 + addon-a11y
 
 
-**Last updated**: 2026-04-20
+**Last updated**: 2026-04-21
