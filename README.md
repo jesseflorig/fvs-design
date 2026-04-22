@@ -20,10 +20,15 @@ npm run mcp              # Storybook MCP server → http://localhost:6007/mcp
 |---|---|
 | `Button` | primary · secondary · ghost · accent · danger · icon |
 | `Badge` | nominal · live · fault · info · offline · neutral · solid |
+| `Blueprint` | van schematic SVG with labeled callouts |
 | `Card` | panel-header with optional badge and hover state |
-| `Input` | text · select · toggle · checkbox |
+| `Charts` | area · bar · grouped bar · stacked bar · line · scatter · histogram · box plot · (empty state) via Recharts |
 | `DataTable` | sortable columns, semantic row colors, optional caption |
 | `Divider` | hair · standard · strong · double |
+| `Gauge` | radial arc gauge with configurable range and thresholds |
+| `Input` | text · select · toggle · checkbox |
+| `Slider` | range slider with min/max labels and live value display |
+| `TrackingMap` | MapLibre GL map with vehicle marker and OpenFreeMap tiles |
 
 ## Token reference
 
@@ -38,7 +43,7 @@ npm run mcp              # Storybook MCP server → http://localhost:6007/mcp
 
 ## Brand
 
-Logo, type specimens (Michroma, Space Mono, IBM Plex Sans/Serif), iconography rules, and voice guidelines.
+Logo, type specimens (Space Mono, IBM Plex Sans/Serif), iconography rules, and voice guidelines.
 
 ## Design tokens
 
@@ -53,8 +58,7 @@ No hardcoded hex, px, or timing values in component code. Token changes propagat
 
 | Family | Use | Hosting |
 |---|---|---|
-| [Michroma](https://fonts.google.com/specimen/Michroma) | Display / headlines | Self-hosted `.ttf` in `src/assets/fonts/` |
-| [Space Mono](https://fonts.google.com/specimen/Space+Mono) | Telemetry data, mono labels | Self-hosted `.ttf`, 4 weights |
+| [Space Mono](https://fonts.google.com/specimen/Space+Mono) | Display, telemetry data, mono labels | Self-hosted `.ttf`, 4 weights |
 | [IBM Plex Sans](https://fonts.google.com/specimen/IBM+Plex+Sans) | Body, UI | Google Fonts CDN |
 | [IBM Plex Serif](https://fonts.google.com/specimen/IBM+Plex+Serif) | Long-form | Google Fonts CDN |
 
