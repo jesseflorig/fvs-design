@@ -5,13 +5,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=IBM+Plex+Serif:wght@400;500;600;700&display=swap');
 
-@font-face {
-  font-family: 'Michroma';
-  src: url('fonts/Michroma-Regular.ttf') format('truetype');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
 
 @font-face {
   font-family: 'Space Mono';
@@ -87,7 +80,7 @@
   --font-sans:       'IBM Plex Sans', ui-sans-serif, system-ui, sans-serif;
   --font-mono:       'Space Mono', ui-monospace, 'SFMono-Regular', Menlo, monospace;
   --font-serif:      'IBM Plex Serif', ui-serif, Georgia, serif;
-  --font-display:    'Michroma', 'IBM Plex Sans', sans-serif;  /* brand display — geometric, aerospace */
+  --font-display:    'Space Mono', monospace;  /* brand display — bold monospace */
 
   /* ------------- Type scale (modular, small steps) -------- */
   --t-micro:         10px;   /* UPPER-CASE META, STATUS PILLS */
@@ -251,7 +244,7 @@ code, pre, .mono {
   font-size: var(--t-display);
   line-height: 1.1;
   letter-spacing: 0.02em;
-  font-weight: 400;  /* Michroma only ships 400 */
+  font-weight: 700;
   text-transform: uppercase;
 }
 
