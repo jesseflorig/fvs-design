@@ -23,6 +23,9 @@ export type { ScatterPlotProps, ScatterSeries, ScatterPoint } from './ScatterPlo
 export { BoxPlot } from './BoxPlot/BoxPlot';
 export type { BoxPlotProps, BoxPlotGroup } from './BoxPlot/BoxPlot';
 
+export { SankeyChart } from './SankeyChart/SankeyChart';
+export type { SankeyChartProps, SankeyNode, SankeyLink } from './SankeyChart/SankeyChart';
+
 export { EmptyChart } from './EmptyChart/EmptyChart';
 export type { EmptyChartProps } from './EmptyChart/EmptyChart';
 
