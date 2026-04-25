@@ -102,8 +102,7 @@ From `001-initial-site`:
 - **@storybook/addon-a11y** — axe-based accessibility checks in stories
 
 Fonts:
-- Michroma (display) — self-hosted `.ttf` in `src/assets/fonts/`
-- Space Mono (telemetry/data) — self-hosted `.ttf`, 4 weights
+- Space Mono (display/telemetry/data) — self-hosted `.ttf`, 4 weights
 - IBM Plex Sans + IBM Plex Serif — Google Fonts CDN (self-hosting is a follow-on task)
 
 ## Project Structure
@@ -114,7 +113,7 @@ src/
 │   ├── tokens.css              # FVS design tokens — source of truth
 │   └── tailwind.config.ts      # Tailwind extension referencing CSS vars
 ├── assets/
-│   ├── fonts/                  # Self-hosted Michroma, Space Mono
+│   ├── fonts/                  # Self-hosted Space Mono
 │   └── svg/                    # logo.svg, mark.svg, favicon.svg, van-blueprint.svg
 ├── lib/
 │   └── resolve-token.ts        # Runtime CSS var resolver (getComputedStyle)

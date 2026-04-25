@@ -16,11 +16,11 @@ function SpecimenRow({ size, text, style }: { size: string; text: string; style:
   );
 }
 
-export const MichromaSpecimen: StoryObj = {
+export const DisplaySpecimen: StoryObj = {
   render: () => (
     <div style={{ background: 'var(--bg)', padding: 24 }}>
       <div style={{ fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--fg-muted)', marginBottom: 16 }}>
-        Michroma — Display · Brand · Aerospace
+        Space Mono — Display · Brand · Aerospace
       </div>
       {[
         { token: '--t-h4',      px: '20px' },

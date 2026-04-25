@@ -22,7 +22,7 @@ npm run mcp              # Storybook MCP server → http://localhost:6007/mcp
 | `Badge` | nominal · live · fault · info · offline · neutral · solid |
 | `Blueprint` | van schematic SVG with labeled callouts |
 | `Card` | panel-header with optional badge and hover state |
-| `Charts` | area · bar · grouped bar · stacked bar · line · scatter · histogram · box plot · (empty state) via Recharts |
+| `Charts` | area · bar · grouped bar · stacked bar · line · scatter · histogram · box plot · sankey · (empty state) via Recharts |
 | `DataTable` | sortable columns, semantic row colors, optional caption |
 | `Divider` | hair · standard · strong · double |
 | `Gauge` | radial arc gauge with configurable range and thresholds |
