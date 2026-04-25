@@ -26,6 +26,7 @@ const preview: Preview = {
     withThemeBackground,
   ],
   parameters: {
+    a11y: { test: 'error' },
     options: {
       storySort: {
         order: [

@@ -24,7 +24,7 @@ export function EmptyChart({ label, height }: EmptyChartProps) {
           fontSize: 11,
           letterSpacing: '0.1em',
           textTransform: 'uppercase',
-          color: 'var(--fg-subtle)',
+          color: 'var(--fg-muted)',
         }}
       >
         {label}
