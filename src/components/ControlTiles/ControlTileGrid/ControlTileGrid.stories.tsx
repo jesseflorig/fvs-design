@@ -31,7 +31,7 @@ export const LandscapeUniform: Story = {
     ariaLabel: 'Landscape uniform control tile grid',
   },
   render: (args) => (
-    <div style={{ width: 1080 }}>
+    <div style={{ width: 880 }}>
       <ControlTileGrid {...args} />
     </div>
   ),
@@ -44,7 +44,7 @@ export const PortraitUniform: Story = {
     ariaLabel: 'Portrait uniform control tile grid',
   },
   render: (args) => (
-    <div style={{ width: 620 }}>
+    <div style={{ width: 500 }}>
       <ControlTileGrid {...args} />
     </div>
   ),
@@ -52,7 +52,7 @@ export const PortraitUniform: Story = {
 
 export const PartialRow: Story = {
   render: () => (
-    <div style={{ width: 1080 }}>
+    <div style={{ width: 880 }}>
       <ControlTileGrid orientation="landscape" items={partialRowGridItems} ariaLabel="Partial row uniform control tile grid" />
     </div>
   ),

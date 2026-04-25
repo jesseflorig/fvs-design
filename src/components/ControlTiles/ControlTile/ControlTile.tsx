@@ -106,83 +106,15 @@ function ControlTileFrame({
   );
 }
 
-function ToggleRail({
-  selected,
-  disabled,
-  state,
-  toggleLabel,
-}: {
-  selected?: boolean;
-  disabled?: boolean;
-  state: TileState;
-  toggleLabel?: string;
-}) {
-  const active = Boolean(selected || state === 'on' || state === 'transitioning');
-
-  return (
-    <div
-      style={{
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'space-between',
-        gap: 'var(--fvs-control-tile-control-gap)',
-        minHeight: 'var(--fvs-control-tile-toggle-height)',
-        padding: 'var(--s-2) var(--s-3)',
-        borderRadius: 'var(--r-pill)',
-        background: disabled ? 'var(--bg)' : active ? 'var(--accent)' : 'var(--bg)',
-        border: '1px solid',
-        borderColor: disabled ? 'var(--line)' : active ? 'var(--accent)' : 'var(--line)',
-      }}
-    >
-      <span
-        style={{
-          fontFamily: 'var(--font-mono)',
-          fontSize: 'var(--t-micro)',
-          letterSpacing: 'var(--tr-label)',
-          textTransform: 'uppercase',
-          color: disabled ? 'var(--fg-subtle)' : active ? 'var(--fvs-black)' : 'var(--fg-muted)',
-        }}
-      >
-        {toggleLabel ?? 'Toggle'}
-      </span>
-      <span
-        aria-hidden="true"
-        style={{
-          width: 26,
-          height: 14,
-          display: 'inline-flex',
-          alignItems: 'center',
-          padding: 1,
-          borderRadius: 'var(--r-pill)',
-          background: active ? 'rgba(10, 10, 11, 0.22)' : 'var(--line)',
-          justifyContent: active ? 'flex-end' : 'flex-start',
-        }}
-      >
-        <span
-          style={{
-            width: 12,
-            height: 12,
-            borderRadius: 'var(--r-pill)',
-            background: active ? 'var(--fvs-black)' : 'var(--bg-elevated)',
-          }}
-        />
-      </span>
-    </div>
-  );
-}
-
 export function ControlTile({
   title,
   subtitle,
-  controlKind = 'summary',
   state,
   stateLabel,
   contextLabel,
-  toggleLabel,
   icon,
   interactive = false,
   disabled = false,
-  selected = false,
   onToggle,
   onPress,
   ariaLabel,
@@ -272,15 +204,6 @@ export function ControlTile({
       </div>
 
       <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--fvs-control-tile-control-gap)' }}>
-        {(controlKind === 'toggle' || controlKind === 'scene') ? (
-          <ToggleRail
-            selected={selected}
-            disabled={disabled}
-            state={state}
-            toggleLabel={toggleLabel}
-          />
-        ) : null}
-
         {state === 'transitioning' ? (
           <span
             style={{

@@ -9,6 +9,10 @@ import {
   unavailableCameraProps,
 } from '../fixtures/controlTileExamples';
 
+const CONTROL_TILE_PREVIEW_WIDTH = 260;
+const STATE_GALLERY_COLUMNS = 2;
+const STATE_GALLERY_WIDTH = `calc(${CONTROL_TILE_PREVIEW_WIDTH * STATE_GALLERY_COLUMNS}px + (${STATE_GALLERY_COLUMNS - 1} * var(--fvs-control-tile-gap-default)))`;
+
 const meta: Meta<typeof ControlTile> = {
   title: 'Components/ControlTiles/ControlTile',
   component: ControlTile,
@@ -21,8 +25,14 @@ const meta: Meta<typeof ControlTile> = {
     selected: { control: 'boolean' },
   },
   decorators: [
-    (Story) => (
-      <div style={{ padding: 'var(--s-7)', background: 'var(--bg)', maxWidth: 320 }}>
+    (Story, context) => (
+      <div
+        style={{
+          padding: 'var(--s-7)',
+          background: 'var(--bg)',
+          maxWidth: context.name === 'State Gallery' ? STATE_GALLERY_WIDTH : CONTROL_TILE_PREVIEW_WIDTH,
+        }}
+      >
         <Story />
       </div>
     ),
