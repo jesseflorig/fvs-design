@@ -66,7 +66,6 @@ function ControlTileFrame({
     boxShadow: 'var(--shadow-hair)',
     color: 'var(--fg)',
     textAlign: 'left',
-    opacity: disabled ? 0.62 : 1,
     transition: 'background var(--dur-fast) var(--ease-std), border-color var(--dur-fast) var(--ease-std), transform var(--dur-fast) var(--ease-std)',
   };
 
@@ -83,7 +82,7 @@ function ControlTileFrame({
           event.currentTarget.style.outlineOffset = '2px';
         }}
         onBlur={(event) => {
-          event.currentTarget.style.outline = 'none';
+          event.currentTarget.style.outline = '2px solid transparent';
         }}
         onMouseDown={(event) => {
           if (!disabled) event.currentTarget.style.transform = 'translateY(1px)';
