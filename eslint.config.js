@@ -8,8 +8,11 @@ export default tseslint.config(
   {
     ignores: [
       'coverage',
-      'storybook-static',
+      'dist',
+      'build',
       'node_modules',
+      'storybook-static',
+      '*.min.js',
     ],
   },
   js.configs.recommended,

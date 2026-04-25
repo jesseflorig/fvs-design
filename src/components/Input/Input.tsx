@@ -143,12 +143,16 @@ export interface ToggleProps {
   checked: boolean;
   onLabel?: string;
   offLabel?: string;
+  activeTone?: 'default' | 'alert';
   disabled?: boolean;
   onChange?: (checked: boolean) => void;
 }
 
-export function Toggle({ label, checked, onLabel = 'On', offLabel = 'Off', disabled, onChange }: ToggleProps) {
+export function Toggle({ label, checked, onLabel = 'On', offLabel = 'Off', activeTone = 'default', disabled, onChange }: ToggleProps) {
   const labelId = useId();
+  const activeColor = activeTone === 'alert' ? 'var(--alert)' : 'var(--fvs-ink)';
+  const activeKnobColor = activeTone === 'alert' ? 'var(--fvs-paper)' : 'var(--fvs-amber)';
+  const activeLabelColor = activeTone === 'alert' ? 'var(--alert)' : 'var(--live)';
 
   return (
     <div style={fieldWrap}>
@@ -169,8 +173,8 @@ export function Toggle({ label, checked, onLabel = 'On', offLabel = 'Off', disab
             position: 'relative',
             width: 44,
             height: 22,
-            background: checked ? 'var(--fvs-ink)' : 'var(--fvs-white)',
-            border: `1px solid ${checked ? 'var(--fvs-ink)' : 'var(--line-strong)'}`,
+            background: checked ? activeColor : 'var(--fvs-white)',
+            border: `1px solid ${checked ? activeColor : 'var(--line-strong)'}`,
             borderRadius: 'var(--r-1)',
             cursor: disabled ? 'not-allowed' : 'pointer',
             padding: 0,
@@ -187,7 +191,7 @@ export function Toggle({ label, checked, onLabel = 'On', offLabel = 'Off', disab
             left: checked ? 22 : 2,
             width: 18,
             height: 16,
-            background: checked ? 'var(--fvs-amber)' : 'var(--fg-subtle)',
+            background: checked ? activeKnobColor : 'var(--fg-subtle)',
             borderRadius: 1,
             transition: 'left var(--dur-fast) var(--ease-std), background var(--dur-fast)',
           }} />
@@ -197,7 +201,7 @@ export function Toggle({ label, checked, onLabel = 'On', offLabel = 'Off', disab
           fontSize: 11,
           letterSpacing: '0.1em',
           textTransform: 'uppercase',
-          color: checked ? 'var(--live)' : 'var(--fg-subtle)',
+          color: checked ? activeLabelColor : 'var(--fg-subtle)',
         }}>
           {checked ? onLabel : offLabel}
         </span>
