@@ -69,7 +69,7 @@ export const WithTooltipFormatter: Story = {
     ariaLabel: 'Speed with tooltip formatter',
     series: [{ key: 'speed', label: 'Speed', data: speedData }],
     yAxis: { label: 'Speed', unit: 'km/h' },
-    tooltip: { formatter: (v: number) => [`${v} km/h`, 'Speed'] },
+    tooltip: { formatter: (v: number) => `${v} km/h` },
     height: 300,
   },
   parameters: { a11y: { config: { rules: [{ id: 'color-contrast', enabled: false }] } } },

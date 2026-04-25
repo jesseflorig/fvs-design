@@ -65,7 +65,7 @@ export const WithTooltipFormatter: Story = {
   args: {
     ariaLabel: 'Distance with tooltip formatter',
     data: tripData,
-    tooltip: { formatter: (v: number) => [`${v} km`, 'Distance'] },
+    tooltip: { formatter: (v: number) => `${v} km` },
     height: 280,
   },
   parameters: { a11y: { config: { rules: [{ id: 'color-contrast', enabled: false }] } } },
