@@ -142,6 +142,20 @@
   --dur-fast:        120ms;
   --dur-med:         200ms;
   --dur-slow:        320ms;
+
+  /* ------------- Control tiles ---------------------------- */
+  --fvs-control-tile-gap-dense: var(--s-3);
+  --fvs-control-tile-gap-default: var(--s-4);
+  --fvs-control-tile-gap-loose: var(--s-5);
+  --fvs-control-tile-padding-flush: var(--s-0);
+  --fvs-control-tile-padding-default: var(--s-5);
+  --fvs-control-tile-padding-roomy: var(--s-7);
+  --fvs-control-tile-padding-x: var(--s-5);
+  --fvs-control-tile-padding-y: var(--s-5);
+  --fvs-control-tile-section-gap: var(--s-3);
+  --fvs-control-tile-control-gap: var(--s-3);
+  --fvs-control-tile-min-h: 168px;
+  --fvs-control-tile-toggle-height: 34px;
 }
 
 /* ============================================================

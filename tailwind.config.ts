@@ -66,6 +66,12 @@ export default {
         's-10': 'var(--s-10)',
         's-11': 'var(--s-11)',
         's-12': 'var(--s-12)',
+        'ct-gap-dense': 'var(--fvs-control-tile-gap-dense)',
+        'ct-gap-default': 'var(--fvs-control-tile-gap-default)',
+        'ct-gap-loose': 'var(--fvs-control-tile-gap-loose)',
+        'ct-pad-default': 'var(--fvs-control-tile-padding-default)',
+        'ct-pad-roomy': 'var(--fvs-control-tile-padding-roomy)',
+        'ct-min-h': 'var(--fvs-control-tile-min-h)',
       },
       borderRadius: {
         'r-0':   'var(--r-0)',
