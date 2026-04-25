@@ -1,9 +1,19 @@
-import type { Preview } from '@storybook/react';
+import React from 'react';
+import type { Preview, Decorator } from '@storybook/react';
 import { withThemeByDataAttribute } from '@storybook/addon-themes';
 import '../src/tokens/tokens.css';
 import { fvsTheme } from './theme';
 
+const withThemeBackground: Decorator = (Story) => (
+  <div style={{ background: 'var(--bg)', minHeight: '100%', padding: '24px' }}>
+    <Story />
+  </div>
+);
+
 const preview: Preview = {
+  globals: {
+    theme: 'Light',
+  },
   decorators: [
     withThemeByDataAttribute({
       themes: {
@@ -13,6 +23,7 @@ const preview: Preview = {
       defaultTheme: 'Light',
       attributeName: 'data-theme',
     }),
+    withThemeBackground,
   ],
   parameters: {
     options: {
