@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import React from 'react';
+import { userEvent, within } from 'storybook/test';
 import { Card } from './Card';
 
 const meta: Meta<typeof Card> = {
@@ -68,4 +69,10 @@ export const WithHover: Story = {
       </Card>
     </div>
   ),
+  play: async ({ canvasElement }) => {
+    const label = within(canvasElement).getByText('HOVER TO SEE SHADOW');
+    const card = label.closest<HTMLElement>('div[style]') ?? (canvasElement.children[0] as HTMLElement);
+    await userEvent.hover(card);
+    await userEvent.unhover(card);
+  },
 };

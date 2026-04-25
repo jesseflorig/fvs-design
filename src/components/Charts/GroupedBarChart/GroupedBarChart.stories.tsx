@@ -45,6 +45,17 @@ export const Horizontal: Story = {
   },
 };
 
+export const HorizontalWithUnit: Story = {
+  args: {
+    ariaLabel: 'Event counts grouped — horizontal with unit',
+    data: eventData,
+    series: seriesDef,
+    orientation: 'horizontal',
+    yAxis: { unit: ' events' },
+    height: 320,
+  },
+};
+
 export const NoLegend: Story = {
   args: {
     ariaLabel: 'Event counts without legend',
@@ -55,11 +66,55 @@ export const NoLegend: Story = {
   },
 };
 
+export const DefaultLegend: Story = {
+  name: 'Default legend (no showLegend prop)',
+  args: {
+    ariaLabel: 'Event counts with default legend',
+    data: eventData,
+    series: seriesDef,
+    height: 300,
+  },
+};
+
+export const WithSeriesColors: Story = {
+  args: {
+    ariaLabel: 'Event counts with custom series colors',
+    data: eventData,
+    series: seriesDef,
+    seriesColors: [
+      { seriesKey: 'alerts', token: '--fvs-amber' },
+      { seriesKey: 'warnings', token: '--fvs-blue' },
+    ],
+    height: 300,
+  },
+};
+
+export const WithAxisLabels: Story = {
+  args: {
+    ariaLabel: 'Event counts with axis labels',
+    data: eventData,
+    series: seriesDef,
+    xAxis: { label: 'Zone' },
+    yAxis: { label: 'Count', unit: 'events' },
+    showLegend: true,
+    height: 300,
+  },
+};
+
 export const Empty: Story = {
   args: {
     ariaLabel: 'No event data available',
     data: [],
     series: seriesDef,
     height: 300,
+  },
+};
+
+export const DefaultHeight: Story = {
+  name: 'Default height (no height prop)',
+  args: {
+    ariaLabel: 'Event counts with default height',
+    data: eventData,
+    series: seriesDef,
   },
 };

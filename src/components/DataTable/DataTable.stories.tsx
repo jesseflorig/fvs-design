@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import React from 'react';
+import { userEvent, within } from 'storybook/test';
 import { DataTable } from './DataTable';
 
 const meta: Meta<typeof DataTable> = {
@@ -12,6 +13,12 @@ export default meta;
 type Story = StoryObj<typeof DataTable>;
 
 export const TelemetryReadings: Story = {
+  play: async ({ canvasElement }) => {
+    const rows = within(canvasElement).getAllByRole('row');
+    const dataRow = rows[1] as HTMLElement;
+    await userEvent.hover(dataRow);
+    await userEvent.unhover(dataRow);
+  },
   render: () => (
     <div style={{ padding: 24, background: 'var(--bg)' }}>
       <DataTable
@@ -27,6 +34,25 @@ export const TelemetryReadings: Story = {
           { channel: 'BUS B · BATT', reading: '+11.82 V', delta: '−0.31', status: 'FAULT',   sync: 'T−00:04' },
           { channel: 'CABIN TEMP',   reading: '21.4 °C',  delta: '+0.4',  status: 'LIVE',    sync: 'T−00:00' },
           { channel: 'ARRAY · 400W', reading: '312 W',    delta: '+18',   status: 'NOMINAL', sync: 'T−00:04' },
+        ]}
+      />
+    </div>
+  ),
+};
+
+export const WithStatusColors: Story = {
+  render: () => (
+    <div style={{ padding: 24, background: 'var(--bg)' }}>
+      <DataTable
+        columns={[
+          { key: 'channel', header: 'Channel' },
+          { key: 'value',   header: 'Value', align: 'right' },
+          { key: 'status',  header: 'Status', statusColor: 'nominal' },
+          { key: 'fault',   header: 'Fault',  statusColor: 'fault' },
+          { key: 'live',    header: 'Live',   statusColor: 'live' },
+        ]}
+        rows={[
+          { channel: 'BUS A', value: '+12.48 V', status: 'OK', fault: '—', live: 'SYNC' },
         ]}
       />
     </div>

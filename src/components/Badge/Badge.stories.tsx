@@ -48,3 +48,18 @@ export const SolidVariants: Story = {
     </div>
   ),
 };
+
+export const DefaultStatus: Story = {
+  name: 'Default status (no status prop)',
+  args: { label: 'Default' },
+};
+
+export const NeutralWithDot: Story = {
+  name: 'Neutral status with showDot=true (dot hidden)',
+  args: { status: 'neutral', label: 'Neutral', showDot: true },
+};
+
+export const SolidUnsupportedStatus: Story = {
+  name: 'Solid — no solid override (fault)',
+  args: { status: 'fault', label: 'Fault', solid: true, showDot: false },
+};

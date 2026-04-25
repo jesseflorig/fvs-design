@@ -62,10 +62,75 @@ export const LargeDataset: Story = {
   },
 };
 
+export const WithSeriesColors: Story = {
+  args: {
+    ariaLabel: 'Speed vs fuel efficiency with custom colors',
+    series: [
+      { key: 'van1', label: 'Van 001', data: van1Data },
+      { key: 'van2', label: 'Van 002', data: van2Data },
+    ],
+    seriesColors: [
+      { seriesKey: 'van1', token: '--fvs-amber' },
+      { seriesKey: 'van2', token: '--fvs-blue' },
+    ],
+    xAxis: { label: 'Speed', unit: 'km/h' },
+    yAxis: { label: 'Efficiency', unit: 'L/100km' },
+    showLegend: true,
+    height: 300,
+  },
+};
+
+export const EmptyDataSeries: Story = {
+  name: 'Empty data in series (not empty series array)',
+  args: {
+    ariaLabel: 'No data points in series',
+    series: [{ key: 'van1', label: 'Van 001', data: [] }],
+    height: 300,
+  },
+};
+
+export const NoAxisLabels: Story = {
+  name: 'No axis labels or units',
+  args: {
+    ariaLabel: 'Speed vs fuel efficiency — no axis labels',
+    series: [{ key: 'van1', label: 'Van 001', data: van1Data }],
+    height: 300,
+  },
+};
+
+export const AxisLabelNoUnit: Story = {
+  name: 'Axis label without unit (covers xAxis.unit falsy branch)',
+  args: {
+    ariaLabel: 'Speed vs fuel efficiency — label only',
+    series: [{ key: 'van1', label: 'Van 001', data: van1Data }],
+    xAxis: { label: 'Speed' },
+    yAxis: { label: 'Efficiency' },
+    height: 300,
+  },
+};
+
+export const CustomDotSize: Story = {
+  name: 'Custom dot size',
+  args: {
+    ariaLabel: 'Speed vs fuel efficiency — large dots',
+    series: [{ key: 'van1', label: 'Van 001', data: van1Data }],
+    dotSize: 8,
+    height: 300,
+  },
+};
+
 export const Empty: Story = {
   args: {
     ariaLabel: 'No scatter data available',
     series: [],
     height: 300,
+  },
+};
+
+export const DefaultHeight: Story = {
+  name: 'Default height (no height prop)',
+  args: {
+    ariaLabel: 'Speed vs fuel efficiency — default height',
+    series: [{ key: 'van1', label: 'Van 001', data: van1Data }],
   },
 };

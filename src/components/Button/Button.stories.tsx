@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import React from 'react';
+import { userEvent, fireEvent, within } from 'storybook/test';
 import { Button } from './Button';
 
 const meta: Meta<typeof Button> = {
@@ -38,14 +39,32 @@ export const AllVariants: Story = {
 
 export const Primary: Story = {
   args: { variant: 'primary', children: 'Engage', disabled: false },
+  play: async ({ canvasElement }) => {
+    const button = within(canvasElement).getByRole('button');
+    await userEvent.hover(button);
+    await userEvent.click(button);
+    await userEvent.unhover(button);
+    button.focus();
+    button.blur();
+  },
 };
 
 export const Secondary: Story = {
   args: { variant: 'secondary', children: 'Cancel' },
+  play: async ({ canvasElement }) => {
+    const button = within(canvasElement).getByRole('button');
+    await userEvent.hover(button);
+    await userEvent.unhover(button);
+  },
 };
 
 export const Ghost: Story = {
   args: { variant: 'ghost', children: 'Dismiss' },
+  play: async ({ canvasElement }) => {
+    const button = within(canvasElement).getByRole('button');
+    await userEvent.hover(button);
+    await userEvent.unhover(button);
+  },
 };
 
 export const Accent: Story = {
@@ -69,6 +88,22 @@ export const Icon: Story = {
   },
 };
 
+export const SmallSize: Story = {
+  name: 'Small size (sm override)',
+  args: { variant: 'primary', size: 'sm', children: 'Engage' },
+};
+
+export const DefaultVariant: Story = {
+  name: 'Default variant (no variant prop)',
+  args: { children: 'Engage' },
+};
+
 export const Disabled: Story = {
   args: { variant: 'primary', children: 'Engage', disabled: true },
+  play: async ({ canvasElement }) => {
+    const button = within(canvasElement).getByRole('button');
+    await fireEvent.mouseOver(button, { bubbles: true });
+    await fireEvent.mouseOut(button, { bubbles: true });
+    await fireEvent.mouseDown(button, { bubbles: true });
+  },
 };

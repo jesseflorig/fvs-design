@@ -143,3 +143,11 @@ export const LongLabel: Story = {
   name: 'Long Label (truncation)',
   args: { value: 55, unit: '%', label: 'Auxiliary Power Unit Output', size: 'md' },
 };
+
+export const NaNValue: Story = {
+  name: 'NaN value (clamps to 0)',
+  args: { value: NaN, label: 'Invalid', unit: '%' },
+  parameters: {
+    a11y: { disable: true },
+  },
+};

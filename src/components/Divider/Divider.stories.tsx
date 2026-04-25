@@ -10,6 +10,14 @@ const meta: Meta<typeof Divider> = {
 export default meta;
 type Story = StoryObj<typeof Divider>;
 
+export const Default: Story = {
+  render: () => (
+    <div style={{ padding: 24, background: 'var(--bg)', maxWidth: 480 }}>
+      <Divider />
+    </div>
+  ),
+};
+
 export const AllWeights: Story = {
   render: () => (
     <div style={{ padding: 24, background: 'var(--bg)', maxWidth: 480 }}>

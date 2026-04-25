@@ -54,6 +54,25 @@ export const CustomBins: Story = {
   },
 };
 
+export const EmptyValues: Story = {
+  name: 'Empty raw values array',
+  args: {
+    ariaLabel: 'No raw values to bucket',
+    values: [],
+    height: 280,
+  },
+};
+
+export const AllSameValues: Story = {
+  name: 'All-identical values (single bucket)',
+  args: {
+    ariaLabel: 'All identical speed readings',
+    values: [60, 60, 60, 60, 60],
+    xAxis: { label: 'Speed', unit: 'km/h' },
+    height: 280,
+  },
+};
+
 export const Empty: Story = {
   args: {
     ariaLabel: 'No distribution data',
@@ -61,3 +80,23 @@ export const Empty: Story = {
     height: 280,
   },
 };
+
+export const DefaultHeight: Story = {
+  name: 'Default height (no height prop)',
+  args: {
+    ariaLabel: 'Speed distribution default height',
+    buckets: preBucketed,
+    xAxis: { label: 'Speed' },
+  },
+};
+
+export const NoAxisLabels: Story = {
+  name: 'No axis labels',
+  args: {
+    ariaLabel: 'Speed distribution no axis labels',
+    buckets: preBucketed,
+    height: 280,
+  },
+};
+
+

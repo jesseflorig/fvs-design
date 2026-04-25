@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import React, { useState } from 'react';
+import { userEvent, fireEvent, within } from 'storybook/test';
 import { Slider } from './Slider';
 
 const meta: Meta<typeof Slider> = {
@@ -25,6 +26,14 @@ type Story = StoryObj<typeof Slider>;
 
 export const Default: Story = {
   args: { defaultValue: 50 },
+  play: async ({ canvasElement }) => {
+    const thumb = within(canvasElement).getByRole('slider');
+    const track = thumb.parentElement as HTMLElement;
+    track.setPointerCapture = () => {};
+    await fireEvent.pointerDown(track, { bubbles: true, clientX: 80, clientY: 10, pointerId: 1 });
+    await fireEvent.pointerMove(track, { bubbles: true, clientX: 120, clientY: 10, pointerId: 1 });
+    await fireEvent.pointerUp(track, { bubbles: true, clientX: 120, clientY: 10, pointerId: 1 });
+  },
 };
 
 export const MinValue: Story = {
@@ -40,10 +49,35 @@ export const MaxValue: Story = {
 export const KeyboardNav: Story = {
   name: 'Keyboard Navigation (tab in, use arrow keys)',
   args: { defaultValue: 50, label: 'Volume', step: 5, showValue: true },
+  play: async ({ canvasElement }) => {
+    const slider = within(canvasElement).getByRole('slider');
+    slider.focus();
+    await userEvent.keyboard('{ArrowRight}');
+    await userEvent.keyboard('{ArrowLeft}');
+    await userEvent.keyboard('{ArrowUp}');
+    await userEvent.keyboard('{ArrowDown}');
+    await userEvent.keyboard('{End}');
+    await userEvent.keyboard('{Home}');
+    await userEvent.keyboard('{PageUp}');
+    await userEvent.keyboard('{PageDown}');
+    await userEvent.keyboard('a');
+    slider.blur();
+  },
 };
 
 export const Disabled: Story = {
   args: { value: 60, disabled: true, label: 'Locked', unit: '%', showValue: true },
+  play: async ({ canvasElement }) => {
+    const thumb = within(canvasElement).getByRole('slider');
+    const track = thumb.parentElement as HTMLElement;
+    track.setPointerCapture = () => {};
+    thumb.focus();
+    await userEvent.keyboard('{ArrowRight}');
+    await fireEvent.pointerDown(track, { bubbles: true, clientX: 80, clientY: 10, pointerId: 1 });
+    await fireEvent.pointerMove(track, { bubbles: true, clientX: 120, clientY: 10, pointerId: 1 });
+    await fireEvent.pointerUp(track, { bubbles: true, clientX: 120, clientY: 10, pointerId: 1 });
+    thumb.blur();
+  },
 };
 
 // ─── US3: Value label and unit ───────────────────────────────────────────────
@@ -97,6 +131,13 @@ export const FractionalStep: Story = {
 
 export const Controlled: Story = {
   name: 'Controlled (external state)',
+  play: async ({ canvasElement }) => {
+    const thumb = within(canvasElement).getByRole('slider');
+    const track = thumb.parentElement as HTMLElement;
+    track.setPointerCapture = () => {};
+    await fireEvent.pointerDown(track, { bubbles: true, clientX: 80, clientY: 10, pointerId: 1 });
+    await fireEvent.pointerUp(track, { bubbles: true, clientX: 80, clientY: 10, pointerId: 1 });
+  },
   render: () => {
     const [v, setV] = useState(25);
     return (
@@ -116,6 +157,45 @@ export const Controlled: Story = {
         </span>
       </div>
     );
+  },
+};
+
+export const InvalidStep: Story = {
+  name: 'Step ≤ 0 (snaps to step=1)',
+  args: { defaultValue: 50, step: 0, showValue: true, label: 'Invalid step' },
+  play: async ({ canvasElement }) => {
+    const thumb = within(canvasElement).getByRole('slider');
+    const track = thumb.parentElement as HTMLElement;
+    track.setPointerCapture = () => {};
+    await fireEvent.pointerDown(track, { bubbles: true, clientX: 80, clientY: 10, pointerId: 1 });
+    await fireEvent.pointerUp(track, { bubbles: true, clientX: 80, clientY: 10, pointerId: 1 });
+  },
+};
+
+export const EqualMinMax: Story = {
+  name: 'Min equals max (disabled range)',
+  args: { value: 50, min: 50, max: 50, label: 'Fixed' },
+  play: async ({ canvasElement }) => {
+    const thumb = within(canvasElement).getByRole('slider');
+    const track = thumb.parentElement as HTMLElement;
+    track.setPointerCapture = () => {};
+    thumb.focus();
+    await userEvent.keyboard('{ArrowRight}');
+    await fireEvent.pointerDown(track, { bubbles: true, clientX: 80, clientY: 10, pointerId: 1 });
+    await fireEvent.pointerMove(track, { bubbles: true, clientX: 120, clientY: 10, pointerId: 1 });
+    await fireEvent.pointerUp(track, { bubbles: true, clientX: 120, clientY: 10, pointerId: 1 });
+    thumb.blur();
+  },
+};
+
+export const PointerMoveNoDrag: Story = {
+  name: 'PointerMove before PointerDown (no drag state)',
+  args: { defaultValue: 50 },
+  play: async ({ canvasElement }) => {
+    const thumb = within(canvasElement).getByRole('slider');
+    const track = thumb.parentElement as HTMLElement;
+    track.setPointerCapture = () => {};
+    await fireEvent.pointerMove(track, { bubbles: true, clientX: 120, clientY: 10, pointerId: 1 });
   },
 };
 

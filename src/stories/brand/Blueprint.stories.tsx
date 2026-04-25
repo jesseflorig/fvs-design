@@ -35,6 +35,23 @@ export const Default: Story = {
   ),
 };
 
+export const DefaultSide: StoryObj = {
+  name: 'Default side (no side prop)',
+  render: () => (
+    <div style={{ background: 'var(--bg)', padding: 24 }}>
+      <Blueprint style={{ width: '100%', maxWidth: 400, color: 'var(--fg)' }} />
+    </div>
+  ),
+};
+
+export const WithAriaLabel: StoryObj = {
+  render: () => (
+    <div style={{ background: 'var(--bg)', padding: 24 }}>
+      <Blueprint side="driver" aria-label="Van driver-side blueprint" style={{ width: '100%', maxWidth: 400, color: 'var(--fg)' }} />
+    </div>
+  ),
+};
+
 export const AllSides: StoryObj = {
   render: () => (
     <div style={{ background: 'var(--bg)', padding: 24, display: 'flex', flexDirection: 'column', gap: 40 }}>

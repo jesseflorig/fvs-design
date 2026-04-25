@@ -103,3 +103,12 @@ export const Empty: Story = {
     height: 280,
   },
 };
+
+export const DefaultHeight: Story = {
+  name: 'Default height (no height prop)',
+  args: {
+    ariaLabel: 'Energy flow with default height',
+    nodes: energyNodes,
+    links: energyLinks,
+  },
+};
