@@ -3,6 +3,7 @@ import svgr from 'vite-plugin-svgr';
 
 const config: StorybookConfig = {
   stories: ['../src/**/*.stories.@(ts|tsx)'],
+  staticDirs: [{ from: '../src/assets/svg', to: '/assets/svg' }],
 
   addons: [
     '@storybook/addon-themes',
