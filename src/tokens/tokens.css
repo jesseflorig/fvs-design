@@ -49,7 +49,7 @@
 
   /* ------------- Signal / semantic (restrained) ------------- */
   --fvs-amber:       #E8A33D;   /* NASA phosphor accent — "live", active */
-  --fvs-amber-dim:   #8A5E1F;
+  --fvs-amber-dim:   #946421;
   --fvs-green:       #4DA35A;   /* nominal / ok */
   --fvs-red:         #C8402C;   /* alert / fault */
   --fvs-blue:        #3A6EA8;   /* informational, reserved */
@@ -71,7 +71,7 @@
 
   --accent:          var(--fvs-amber);
   --nominal:         #2D7A38;           /* accessible green 4.71:1 on --bg — WCAG AA */
-  --live:            var(--fvs-amber-dim); /* accessible amber text 5.03:1 on --bg — WCAG AA */
+  --live:            var(--fvs-amber-dim); /* accessible amber text 4.53:1 on --bg — WCAG AA */
   --alert:           #BE3D2A;           /* accessible red 4.78:1 on --bg — WCAG AA */
   --info:            var(--fvs-blue);   /* 4.68:1 on --bg — WCAG AA */
   --offline:         #6C6C74;           /* accessible gray 4.60:1 on --bg — WCAG AA */

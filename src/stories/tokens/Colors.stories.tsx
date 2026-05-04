@@ -111,7 +111,7 @@ export const SignalSemantic: StoryObj = {
   render: () => (
     <SwatchGrid>
       <Swatch name="--fvs-amber"    value="#E8A33D" role="accent — live / active state" />
-      <Swatch name="--fvs-amber-dim"value="#8A5E1F" role="amber on dark surfaces" />
+      <Swatch name="--fvs-amber-dim"value="#946421" role="accessible amber text on light surfaces" />
       <Swatch name="--fvs-green"    value="#4DA35A" role="nominal / ok" />
       <Swatch name="--fvs-red"      value="#C8402C" role="alert / fault" />
       <Swatch name="--fvs-blue"     value="#3A6EA8" role="informational" />
